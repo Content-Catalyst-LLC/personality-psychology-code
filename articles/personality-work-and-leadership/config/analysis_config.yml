@@ -1,0 +1,27 @@
+article_slug: personality-work-and-leadership
+dataset: data/synthetic_personality_work_leadership.csv
+outputs_dir: outputs
+traits:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+  - emotional_stability
+  - dark_trait_pressure
+context_columns:
+  - role_family
+  - organizational_context
+  - role_fit
+  - accountability
+outcomes:
+  - job_performance
+  - leadership_emergence
+  - leadership_effectiveness
+  - counterproductive_work_behavior
+  - teamwork_quality
+  - burnout_risk
+notes:
+  - Synthetic data only.
+  - Designed for reproducible work-personality and leadership modeling examples.
+  - Interpret outputs as workflow demonstrations, not workplace assessment tools.
