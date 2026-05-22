@@ -1,0 +1,24 @@
+article_slug: personality-and-political-behavior
+dataset: data/synthetic_personality_political_behavior.csv
+outputs_dir: outputs
+traits:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+political_context_columns:
+  - country_context
+  - political_system_type
+  - civic_opportunity
+  - media_exposure
+outcomes:
+  - ideology_score
+  - political_participation
+  - affective_polarization
+  - trust_in_institutions
+  - leadership_authority_preference
+notes:
+  - Synthetic data only.
+  - Designed for reproducible political-personality modeling examples.
+  - Interpret outputs as workflow demonstrations, not claims about real voters or groups.
