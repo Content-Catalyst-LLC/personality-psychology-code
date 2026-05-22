@@ -1,0 +1,37 @@
+article_slug: self-concept-self-esteem-and-self-knowledge
+dataset: data/synthetic_self_concept_self_esteem_self_knowledge.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - self_system_context
+self_concept_columns:
+  - self_warmth
+  - self_conscientiousness
+  - self_emotional_stability
+  - self_openness
+observer_columns:
+  - other_warmth
+  - other_conscientiousness
+  - other_emotional_stability
+  - other_openness
+self_discrepancy_columns:
+  - actual_self
+  - ideal_self
+  - ought_self
+social_context_columns:
+  - social_recognition
+  - external_devaluation
+outcomes:
+  - self_esteem
+  - well_being
+derived_constructs:
+  - self_other_gap_mean
+  - self_knowledge_accuracy
+  - actual_ideal_discrepancy
+  - actual_ought_discrepancy
+  - total_self_discrepancy
+  - self_concept_positivity
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for clinical assessment, diagnosis, identity evaluation, personality testing, workplace screening, educational placement, legal evaluation, or individual prediction.
