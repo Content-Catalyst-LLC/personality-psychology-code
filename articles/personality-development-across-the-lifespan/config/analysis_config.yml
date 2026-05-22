@@ -1,0 +1,32 @@
+article_slug: personality-development-across-the-lifespan
+dataset: data/synthetic_personality_lifespan.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - wave
+  - wave_numeric
+time_context:
+  - age
+  - life_stage
+  - cohort
+  - cultural_context
+traits:
+  - neuroticism
+  - extraversion
+  - conscientiousness
+  - openness
+  - agreeableness
+developmental_processes:
+  - role_investment
+  - state_practice_frequency
+  - perceived_support
+derived_outputs:
+  - wave_summary
+  - life_stage_summary
+  - individual_change_summary
+  - rank_order_stability
+  - model_coefficients
+notes:
+  - Synthetic longitudinal data only.
+  - Educational and research-oriented workflow.
+  - Not for clinical assessment, personality testing, coaching guidance, workplace screening, educational placement, or individual prediction.
