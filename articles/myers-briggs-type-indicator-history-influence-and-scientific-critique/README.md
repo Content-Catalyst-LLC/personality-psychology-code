@@ -60,8 +60,15 @@ The dataset is synthetic so the workflow can be inspected, replicated, and exten
 
 The interpretive standard is proportional. A type code can be useful as a conversational or reflective shorthand, but it should not be treated as a full account of a person. Continuous scores often preserve information that dichotomous labels discard. Boundary cases require particular caution, because small score differences or measurement fluctuation can change a categorical assignment without indicating a meaningful change in personality.
 
-Use this scaffold to clarify concepts, test reproducible workflows, and support careful research design. Do not use it for hiring, promotion, clinical assessment, diagnosis, educational placement, relationship matching, legal evaluation, or individual prediction.
+## Professional Use Boundary
 
+This repository may be used for professional education, research prototyping, methodological demonstration, reproducible workflow development, organizational learning, consulting support, workshop materials, and critical analysis of personality typologies and dimensional measurement.
+
+It is appropriate for demonstrating how typological systems compress continuous variation, how threshold effects create boundary cases, how retest instability can occur near cutpoints, and how dimensional models can preserve information that categorical labels may discard.
+
+This repository should not be used as a standalone assessment system for making consequential decisions about individuals. It should not be used for hiring, promotion, termination, clinical assessment, diagnosis, educational placement, legal evaluation, relationship matching, or individual prediction unless it is substantially redesigned, validated for that specific purpose, reviewed by qualified professionals, and governed by appropriate ethical, legal, privacy, and psychometric safeguards.
+
+The intended professional use is analytic, educational, methodological, and reflective — not classificatory or gatekeeping.
 ## Companion article
 
 GitHub directory:
