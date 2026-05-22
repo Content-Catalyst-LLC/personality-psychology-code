@@ -1,0 +1,31 @@
+article_slug: selfhood-agency-and-personal-identity-in-personality-psychology
+dataset: data/synthetic_selfhood_agency_identity.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - identity_context
+self_continuity_columns:
+  - past_self
+  - present_self
+  - future_self
+agency_columns:
+  - intentional_clarity
+  - action_ownership
+  - self_efficacy
+  - external_constraint
+  - social_recognition
+identity_columns:
+  - value_commitment_gap
+  - identity_integration
+  - well_being
+derived_constructs:
+  - past_present_gap
+  - present_future_gap
+  - temporal_self_continuity
+  - agency_index
+  - situated_agency_index
+  - identity_alignment
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for clinical assessment, diagnosis, identity evaluation, personality testing, workplace screening, legal evaluation, or individual prediction.
