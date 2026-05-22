@@ -1,0 +1,241 @@
+participant_id,culture_group,openness,conscientiousness,extraversion,agreeableness,neuroticism,honesty_humility,context_collectivism,behavioral_manifestation,survey_language_family
+P0001,sample_A_relational,4.946,4.359,5.253,4.793,4.208,3.499,0.620,4.836,Indo-European
+P0002,sample_A_relational,3.774,4.768,4.052,5.188,3.141,3.910,0.620,5.702,Indo-European
+P0003,sample_A_relational,3.673,4.551,4.508,4.096,4.073,5.282,0.620,5.078,Indo-European
+P0004,sample_A_relational,5.563,4.788,5.421,5.245,3.901,3.032,0.620,4.597,Indo-European
+P0005,sample_A_relational,3.640,3.440,3.998,3.682,4.617,4.204,0.620,4.871,Indo-European
+P0006,sample_A_relational,3.712,5.497,4.371,3.639,3.446,4.610,0.620,5.127,Indo-European
+P0007,sample_A_relational,3.579,4.585,3.231,3.713,2.641,3.839,0.620,4.762,Indo-European
+P0008,sample_A_relational,6.109,4.481,5.304,3.973,3.376,5.127,0.620,5.101,Indo-European
+P0009,sample_A_relational,3.091,4.161,4.087,4.508,2.752,5.094,0.620,5.734,Indo-European
+P0010,sample_A_relational,4.423,4.299,3.789,3.941,3.723,3.360,0.620,5.435,Indo-European
+P0011,sample_A_relational,5.978,4.697,4.510,5.047,2.978,3.493,0.620,5.078,Indo-European
+P0012,sample_A_relational,4.410,3.353,3.324,3.857,1.890,4.659,0.620,5.105,Indo-European
+P0013,sample_A_relational,4.097,4.248,2.988,4.538,3.680,5.612,0.620,5.241,Indo-European
+P0014,sample_A_relational,3.390,4.989,5.437,3.414,3.949,3.799,0.620,3.470,Indo-European
+P0015,sample_A_relational,3.502,4.550,3.822,3.144,2.989,4.335,0.620,4.350,Indo-European
+P0016,sample_A_relational,4.379,4.847,2.873,4.660,2.345,3.462,0.620,4.537,Indo-European
+P0017,sample_A_relational,4.061,5.343,4.190,4.197,2.199,4.728,0.620,4.947,Indo-European
+P0018,sample_A_relational,3.210,4.087,3.991,3.558,2.896,4.526,0.620,5.057,Indo-European
+P0019,sample_A_relational,5.360,4.786,3.057,4.255,3.343,5.324,0.620,4.670,Indo-European
+P0020,sample_A_relational,3.484,4.381,3.878,5.537,4.143,5.253,0.620,5.441,Indo-European
+P0021,sample_A_relational,5.616,4.631,5.153,4.342,4.115,3.981,0.620,4.301,Indo-European
+P0022,sample_A_relational,5.476,4.988,2.360,4.575,3.108,4.232,0.620,4.928,Indo-European
+P0023,sample_A_relational,5.058,4.050,2.825,5.223,2.287,4.975,0.620,4.248,Indo-European
+P0024,sample_A_relational,4.263,3.944,4.325,3.780,3.454,4.020,0.620,5.151,Indo-European
+P0025,sample_A_relational,4.550,5.527,5.177,5.407,2.939,4.435,0.620,6.568,Indo-European
+P0026,sample_A_relational,3.777,5.359,3.692,5.922,3.238,3.956,0.620,5.255,Indo-European
+P0027,sample_A_relational,4.495,5.994,4.539,4.389,2.237,4.490,0.620,4.884,Indo-European
+P0028,sample_A_relational,3.915,3.722,3.648,5.434,3.810,3.683,0.620,4.702,Indo-European
+P0029,sample_A_relational,3.581,5.261,3.730,4.880,3.736,5.017,0.620,5.077,Indo-European
+P0030,sample_A_relational,3.783,4.858,4.760,5.384,1.581,4.764,0.620,5.050,Indo-European
+P0031,sample_A_relational,4.152,5.411,2.797,4.919,3.746,3.945,0.620,4.495,Indo-European
+P0032,sample_A_relational,4.158,4.398,5.179,5.274,3.945,4.516,0.620,4.651,Indo-European
+P0033,sample_A_relational,4.470,2.397,4.424,4.011,3.427,4.552,0.620,4.523,Indo-European
+P0034,sample_A_relational,6.082,3.766,2.172,4.486,2.801,3.964,0.620,4.601,Indo-European
+P0035,sample_A_relational,4.926,4.290,3.556,4.352,3.501,4.300,0.620,4.510,Indo-European
+P0036,sample_A_relational,3.568,4.175,4.396,4.970,2.610,4.260,0.620,5.094,Indo-European
+P0037,sample_A_relational,4.659,3.701,4.529,3.438,4.441,4.783,0.620,3.913,Indo-European
+P0038,sample_A_relational,4.079,3.803,3.809,4.773,2.989,5.078,0.620,5.013,Indo-European
+P0039,sample_A_relational,4.090,3.933,2.641,4.229,3.871,3.697,0.620,4.727,Indo-European
+P0040,sample_A_relational,3.721,4.202,3.799,4.768,2.806,3.147,0.620,4.014,Indo-European
+P0041,sample_B_individualist,5.319,4.312,3.771,3.186,3.252,4.514,0.350,3.443,Germanic
+P0042,sample_B_individualist,4.004,4.888,2.582,3.240,4.723,5.545,0.350,4.809,Germanic
+P0043,sample_B_individualist,4.701,4.404,5.108,4.689,3.636,3.778,0.350,5.224,Germanic
+P0044,sample_B_individualist,4.812,3.540,3.064,4.363,3.674,5.337,0.350,4.446,Germanic
+P0045,sample_B_individualist,4.185,6.088,3.781,4.270,5.437,4.316,0.350,5.636,Germanic
+P0046,sample_B_individualist,3.388,5.198,1.818,5.557,4.012,4.195,0.350,4.649,Germanic
+P0047,sample_B_individualist,4.056,4.258,4.037,5.380,4.286,2.747,0.350,4.394,Germanic
+P0048,sample_B_individualist,4.173,3.799,3.493,5.566,2.669,4.402,0.350,6.023,Germanic
+P0049,sample_B_individualist,3.427,3.646,3.279,4.063,3.083,4.629,0.350,4.172,Germanic
+P0050,sample_B_individualist,5.650,4.333,4.876,5.056,4.746,3.684,0.350,5.728,Germanic
+P0051,sample_B_individualist,3.493,4.568,3.534,4.375,4.056,4.142,0.350,5.122,Germanic
+P0052,sample_B_individualist,3.969,4.171,3.148,4.569,2.813,5.206,0.350,4.586,Germanic
+P0053,sample_B_individualist,4.785,3.694,4.335,4.823,1.982,4.931,0.350,4.280,Germanic
+P0054,sample_B_individualist,4.449,4.430,3.100,4.722,2.701,5.441,0.350,4.167,Germanic
+P0055,sample_B_individualist,4.385,5.816,4.871,5.743,4.039,4.112,0.350,6.384,Germanic
+P0056,sample_B_individualist,5.138,5.882,2.379,2.969,3.696,3.217,0.350,5.346,Germanic
+P0057,sample_B_individualist,4.376,4.778,4.305,4.434,1.988,3.374,0.350,5.193,Germanic
+P0058,sample_B_individualist,4.636,5.463,4.971,4.307,4.001,3.898,0.350,5.464,Germanic
+P0059,sample_B_individualist,5.063,4.804,4.916,4.446,3.685,4.337,0.350,4.749,Germanic
+P0060,sample_B_individualist,4.750,6.277,3.058,3.213,2.103,4.844,0.350,5.208,Germanic
+P0061,sample_B_individualist,4.188,3.559,4.090,4.711,3.978,3.591,0.350,3.991,Germanic
+P0062,sample_B_individualist,3.922,5.466,4.863,4.516,4.050,6.085,0.350,5.402,Germanic
+P0063,sample_B_individualist,3.695,5.006,4.863,4.788,4.629,3.721,0.350,4.504,Germanic
+P0064,sample_B_individualist,4.494,4.261,2.898,4.579,2.396,5.980,0.350,5.596,Germanic
+P0065,sample_B_individualist,2.922,4.247,4.475,4.931,3.258,4.096,0.350,4.651,Germanic
+P0066,sample_B_individualist,3.768,5.443,4.635,4.778,4.279,4.775,0.350,5.310,Germanic
+P0067,sample_B_individualist,3.927,4.742,4.453,4.039,3.333,4.408,0.350,4.815,Germanic
+P0068,sample_B_individualist,6.025,5.737,3.641,4.321,3.858,4.543,0.350,4.855,Germanic
+P0069,sample_B_individualist,4.203,4.734,4.525,4.159,3.907,3.558,0.350,4.802,Germanic
+P0070,sample_B_individualist,3.586,3.287,4.696,4.217,3.450,4.519,0.350,4.524,Germanic
+P0071,sample_B_individualist,4.036,5.358,5.608,4.297,3.498,4.251,0.350,5.252,Germanic
+P0072,sample_B_individualist,3.549,3.977,2.746,3.794,3.437,4.820,0.350,5.425,Germanic
+P0073,sample_B_individualist,4.423,3.101,3.805,4.536,4.044,4.501,0.350,4.700,Germanic
+P0074,sample_B_individualist,3.017,3.947,3.000,4.022,3.221,4.875,0.350,4.743,Germanic
+P0075,sample_B_individualist,3.486,3.339,3.378,3.992,3.742,4.275,0.350,4.110,Germanic
+P0076,sample_B_individualist,3.530,3.106,3.364,4.681,4.245,4.442,0.350,4.238,Germanic
+P0077,sample_B_individualist,3.755,3.241,4.509,3.896,4.355,4.416,0.350,4.368,Germanic
+P0078,sample_B_individualist,4.681,4.874,3.184,5.075,4.947,3.999,0.350,5.151,Germanic
+P0079,sample_B_individualist,2.672,3.953,3.024,4.243,3.540,4.314,0.350,5.216,Germanic
+P0080,sample_B_individualist,4.462,4.881,3.507,4.647,3.390,5.055,0.350,5.331,Germanic
+P0081,sample_C_honor_context,3.425,3.087,3.417,3.166,2.746,4.714,0.550,4.411,Semitic
+P0082,sample_C_honor_context,3.704,4.845,3.757,3.830,3.549,4.228,0.550,5.499,Semitic
+P0083,sample_C_honor_context,4.955,3.525,5.037,4.642,3.842,4.469,0.550,5.046,Semitic
+P0084,sample_C_honor_context,3.415,4.287,1.990,4.965,4.996,5.033,0.550,4.670,Semitic
+P0085,sample_C_honor_context,5.442,4.991,5.327,3.649,3.542,4.663,0.550,5.402,Semitic
+P0086,sample_C_honor_context,4.379,4.530,4.716,3.492,4.351,4.785,0.550,4.806,Semitic
+P0087,sample_C_honor_context,3.999,3.235,2.917,4.662,3.323,4.866,0.550,5.010,Semitic
+P0088,sample_C_honor_context,3.835,4.754,4.419,4.752,4.191,4.601,0.550,5.098,Semitic
+P0089,sample_C_honor_context,4.448,4.198,2.905,4.557,3.736,4.377,0.550,4.894,Semitic
+P0090,sample_C_honor_context,5.241,4.253,2.859,5.642,4.410,4.064,0.550,5.264,Semitic
+P0091,sample_C_honor_context,3.621,4.667,4.295,3.802,5.580,4.690,0.550,5.026,Semitic
+P0092,sample_C_honor_context,4.931,4.651,2.678,5.295,4.316,4.730,0.550,5.927,Semitic
+P0093,sample_C_honor_context,4.005,5.156,4.433,4.108,3.212,3.261,0.550,5.430,Semitic
+P0094,sample_C_honor_context,3.907,3.868,2.838,3.964,3.315,4.493,0.550,3.899,Semitic
+P0095,sample_C_honor_context,3.436,4.560,3.995,4.938,2.903,3.518,0.550,5.305,Semitic
+P0096,sample_C_honor_context,4.676,4.013,5.332,4.982,2.770,4.228,0.550,4.377,Semitic
+P0097,sample_C_honor_context,4.449,2.919,5.197,4.997,3.090,4.581,0.550,4.162,Semitic
+P0098,sample_C_honor_context,4.889,4.828,3.508,5.157,3.435,5.286,0.550,5.621,Semitic
+P0099,sample_C_honor_context,4.017,4.914,4.338,4.351,3.834,4.286,0.550,5.252,Semitic
+P0100,sample_C_honor_context,5.336,5.633,3.499,4.721,2.375,2.855,0.550,5.259,Semitic
+P0101,sample_C_honor_context,4.841,4.102,3.875,3.783,3.108,4.977,0.550,4.917,Semitic
+P0102,sample_C_honor_context,3.980,4.688,2.705,4.946,2.989,3.297,0.550,4.671,Semitic
+P0103,sample_C_honor_context,4.436,5.260,3.399,4.530,3.302,4.257,0.550,4.893,Semitic
+P0104,sample_C_honor_context,4.374,4.055,3.777,4.459,3.035,4.242,0.550,4.330,Semitic
+P0105,sample_C_honor_context,4.388,4.452,3.779,4.843,3.180,4.672,0.550,5.235,Semitic
+P0106,sample_C_honor_context,3.416,3.885,4.019,4.783,4.321,4.465,0.550,4.791,Semitic
+P0107,sample_C_honor_context,4.669,3.821,2.986,4.068,4.243,3.979,0.550,4.936,Semitic
+P0108,sample_C_honor_context,4.747,5.327,4.121,3.875,3.471,4.290,0.550,5.136,Semitic
+P0109,sample_C_honor_context,3.145,4.873,2.835,5.252,3.507,4.938,0.550,5.621,Semitic
+P0110,sample_C_honor_context,4.849,3.685,3.393,4.939,3.065,3.387,0.550,5.316,Semitic
+P0111,sample_C_honor_context,3.406,4.157,2.718,4.640,2.556,3.849,0.550,5.055,Semitic
+P0112,sample_C_honor_context,4.530,4.828,3.463,4.507,4.288,4.874,0.550,5.410,Semitic
+P0113,sample_C_honor_context,5.349,4.878,3.070,4.456,4.117,4.662,0.550,5.716,Semitic
+P0114,sample_C_honor_context,4.411,4.584,3.684,4.123,4.621,4.740,0.550,5.510,Semitic
+P0115,sample_C_honor_context,3.982,4.486,2.537,3.820,3.230,4.498,0.550,4.655,Semitic
+P0116,sample_C_honor_context,5.015,2.711,3.998,4.177,3.829,4.230,0.550,3.492,Semitic
+P0117,sample_C_honor_context,5.034,3.407,4.726,4.828,2.931,4.557,0.550,4.103,Semitic
+P0118,sample_C_honor_context,4.963,4.903,3.333,4.337,3.161,3.946,0.550,4.343,Semitic
+P0119,sample_C_honor_context,6.692,5.660,3.874,2.943,3.613,4.870,0.550,4.458,Semitic
+P0120,sample_C_honor_context,4.932,4.405,4.185,4.777,4.032,3.751,0.550,5.362,Semitic
+P0121,sample_D_communal,3.639,4.897,4.157,3.985,3.917,4.591,0.720,5.311,Bantu
+P0122,sample_D_communal,4.935,4.688,4.638,3.977,4.649,5.894,0.720,4.668,Bantu
+P0123,sample_D_communal,3.582,4.139,4.662,5.377,3.477,4.362,0.720,5.913,Bantu
+P0124,sample_D_communal,3.053,3.885,5.134,3.701,3.484,3.987,0.720,4.638,Bantu
+P0125,sample_D_communal,3.853,4.390,4.579,3.834,2.872,4.284,0.720,4.852,Bantu
+P0126,sample_D_communal,3.786,3.401,4.692,5.614,3.009,4.581,0.720,5.458,Bantu
+P0127,sample_D_communal,4.593,4.770,3.334,4.111,2.743,4.386,0.720,5.689,Bantu
+P0128,sample_D_communal,4.884,4.133,3.416,5.019,4.448,3.506,0.720,5.174,Bantu
+P0129,sample_D_communal,3.669,4.132,3.322,3.794,2.785,4.037,0.720,4.091,Bantu
+P0130,sample_D_communal,4.632,5.021,5.096,5.250,3.386,4.847,0.720,5.437,Bantu
+P0131,sample_D_communal,3.872,3.724,4.705,5.082,2.162,4.192,0.720,5.721,Bantu
+P0132,sample_D_communal,4.255,4.265,4.336,2.651,3.151,3.478,0.720,4.632,Bantu
+P0133,sample_D_communal,4.322,4.221,2.204,5.729,3.751,4.874,0.720,5.456,Bantu
+P0134,sample_D_communal,3.934,4.320,3.184,4.767,3.235,4.668,0.720,4.301,Bantu
+P0135,sample_D_communal,4.714,4.992,4.308,4.386,4.914,4.620,0.720,4.839,Bantu
+P0136,sample_D_communal,4.913,4.383,3.735,4.032,4.415,4.359,0.720,5.003,Bantu
+P0137,sample_D_communal,3.426,4.222,1.000,3.803,2.035,4.215,0.720,5.109,Bantu
+P0138,sample_D_communal,5.026,4.599,3.990,4.496,3.252,4.384,0.720,5.342,Bantu
+P0139,sample_D_communal,4.007,4.695,4.499,5.164,3.861,4.940,0.720,5.697,Bantu
+P0140,sample_D_communal,5.559,3.461,4.201,4.415,3.524,5.098,0.720,4.475,Bantu
+P0141,sample_D_communal,5.128,4.200,3.685,3.829,3.782,5.218,0.720,5.688,Bantu
+P0142,sample_D_communal,5.277,3.960,5.874,4.711,4.095,4.657,0.720,5.292,Bantu
+P0143,sample_D_communal,3.474,5.549,4.557,4.852,3.677,3.411,0.720,4.859,Bantu
+P0144,sample_D_communal,4.173,5.481,2.733,5.564,2.672,5.489,0.720,6.003,Bantu
+P0145,sample_D_communal,3.980,5.758,2.716,3.404,4.433,4.704,0.720,5.537,Bantu
+P0146,sample_D_communal,3.432,4.397,2.189,3.210,4.198,4.369,0.720,4.719,Bantu
+P0147,sample_D_communal,4.023,5.448,4.558,4.686,4.012,4.999,0.720,6.152,Bantu
+P0148,sample_D_communal,5.497,4.152,3.790,4.809,1.824,3.530,0.720,5.279,Bantu
+P0149,sample_D_communal,2.624,3.023,4.011,4.239,2.672,5.675,0.720,5.046,Bantu
+P0150,sample_D_communal,4.618,3.533,3.853,4.747,3.278,4.838,0.720,5.276,Bantu
+P0151,sample_D_communal,3.097,5.385,3.558,3.754,3.753,4.660,0.720,5.467,Bantu
+P0152,sample_D_communal,5.972,4.910,3.822,3.824,3.993,4.632,0.720,5.736,Bantu
+P0153,sample_D_communal,2.546,4.128,3.128,3.790,3.226,5.651,0.720,5.335,Bantu
+P0154,sample_D_communal,3.236,3.304,4.110,4.977,3.713,4.133,0.720,5.205,Bantu
+P0155,sample_D_communal,3.834,5.053,4.085,4.209,3.226,4.919,0.720,4.975,Bantu
+P0156,sample_D_communal,3.645,4.890,2.648,4.516,3.833,4.243,0.720,5.458,Bantu
+P0157,sample_D_communal,4.274,4.249,4.644,5.278,3.138,3.798,0.720,5.232,Bantu
+P0158,sample_D_communal,5.106,4.996,2.922,4.902,3.831,3.899,0.720,4.955,Bantu
+P0159,sample_D_communal,2.551,4.005,5.592,4.669,3.293,4.901,0.720,5.320,Bantu
+P0160,sample_D_communal,3.871,4.524,4.605,3.298,2.752,4.350,0.720,5.071,Bantu
+P0161,sample_E_mixed_urban,3.735,4.862,3.898,4.707,3.626,4.619,0.480,4.605,Sino-Tibetan
+P0162,sample_E_mixed_urban,4.702,4.084,4.521,5.087,4.195,4.472,0.480,4.973,Sino-Tibetan
+P0163,sample_E_mixed_urban,4.712,4.918,4.332,4.682,2.848,3.639,0.480,5.609,Sino-Tibetan
+P0164,sample_E_mixed_urban,5.680,5.598,3.971,5.040,3.184,4.793,0.480,5.388,Sino-Tibetan
+P0165,sample_E_mixed_urban,3.765,3.921,4.114,4.466,1.917,3.578,0.480,3.680,Sino-Tibetan
+P0166,sample_E_mixed_urban,4.613,4.603,4.256,3.889,3.446,3.547,0.480,5.274,Sino-Tibetan
+P0167,sample_E_mixed_urban,3.021,4.237,5.397,4.616,3.347,4.941,0.480,5.139,Sino-Tibetan
+P0168,sample_E_mixed_urban,3.439,4.533,3.440,4.481,3.522,5.131,0.480,4.260,Sino-Tibetan
+P0169,sample_E_mixed_urban,3.713,3.298,3.609,5.295,3.748,5.046,0.480,4.368,Sino-Tibetan
+P0170,sample_E_mixed_urban,3.382,3.969,2.677,3.835,3.629,4.234,0.480,3.940,Sino-Tibetan
+P0171,sample_E_mixed_urban,3.591,3.332,2.456,4.252,3.486,3.944,0.480,4.681,Sino-Tibetan
+P0172,sample_E_mixed_urban,3.146,5.807,4.210,4.935,2.798,5.794,0.480,5.663,Sino-Tibetan
+P0173,sample_E_mixed_urban,5.332,3.777,4.686,4.881,2.310,4.552,0.480,5.521,Sino-Tibetan
+P0174,sample_E_mixed_urban,3.119,5.174,3.514,3.479,4.253,2.938,0.480,4.826,Sino-Tibetan
+P0175,sample_E_mixed_urban,3.947,4.612,3.711,4.231,3.834,4.057,0.480,4.244,Sino-Tibetan
+P0176,sample_E_mixed_urban,2.726,4.432,4.601,4.744,4.209,3.567,0.480,5.066,Sino-Tibetan
+P0177,sample_E_mixed_urban,3.030,4.254,4.535,4.019,3.216,4.991,0.480,4.826,Sino-Tibetan
+P0178,sample_E_mixed_urban,5.129,3.829,3.787,5.395,3.158,5.194,0.480,5.414,Sino-Tibetan
+P0179,sample_E_mixed_urban,4.597,3.969,3.464,3.595,2.812,4.298,0.480,4.770,Sino-Tibetan
+P0180,sample_E_mixed_urban,3.898,3.777,3.506,5.552,3.210,4.489,0.480,5.495,Sino-Tibetan
+P0181,sample_E_mixed_urban,4.210,3.688,2.623,3.585,2.243,4.802,0.480,4.243,Sino-Tibetan
+P0182,sample_E_mixed_urban,3.316,4.022,4.074,4.120,3.035,4.774,0.480,4.791,Sino-Tibetan
+P0183,sample_E_mixed_urban,2.759,3.180,4.326,4.870,3.710,3.540,0.480,4.428,Sino-Tibetan
+P0184,sample_E_mixed_urban,4.161,3.972,5.423,3.678,3.727,4.286,0.480,4.757,Sino-Tibetan
+P0185,sample_E_mixed_urban,5.298,3.728,2.849,4.862,4.706,4.767,0.480,6.049,Sino-Tibetan
+P0186,sample_E_mixed_urban,5.936,3.706,4.167,3.927,3.525,3.804,0.480,4.016,Sino-Tibetan
+P0187,sample_E_mixed_urban,3.304,6.155,3.798,3.977,4.370,4.652,0.480,5.873,Sino-Tibetan
+P0188,sample_E_mixed_urban,4.204,4.689,4.810,4.526,4.200,3.848,0.480,4.514,Sino-Tibetan
+P0189,sample_E_mixed_urban,3.752,3.471,5.538,5.426,5.579,5.392,0.480,5.522,Sino-Tibetan
+P0190,sample_E_mixed_urban,3.619,4.467,2.581,4.428,2.262,5.257,0.480,5.466,Sino-Tibetan
+P0191,sample_E_mixed_urban,4.027,5.696,2.563,4.272,3.956,4.454,0.480,5.436,Sino-Tibetan
+P0192,sample_E_mixed_urban,4.466,3.420,2.808,4.383,5.388,4.823,0.480,4.820,Sino-Tibetan
+P0193,sample_E_mixed_urban,4.481,4.003,3.521,4.779,3.828,4.753,0.480,4.757,Sino-Tibetan
+P0194,sample_E_mixed_urban,4.829,4.648,4.771,4.172,4.112,3.657,0.480,4.246,Sino-Tibetan
+P0195,sample_E_mixed_urban,5.694,3.947,4.403,4.650,2.502,4.937,0.480,5.386,Sino-Tibetan
+P0196,sample_E_mixed_urban,3.900,3.999,4.280,4.409,2.403,4.148,0.480,4.988,Sino-Tibetan
+P0197,sample_E_mixed_urban,3.855,4.427,4.756,4.426,2.009,3.964,0.480,4.838,Sino-Tibetan
+P0198,sample_E_mixed_urban,4.239,4.744,3.809,4.065,4.036,4.576,0.480,4.877,Sino-Tibetan
+P0199,sample_E_mixed_urban,5.720,3.968,2.005,3.610,4.421,4.457,0.480,3.890,Sino-Tibetan
+P0200,sample_E_mixed_urban,3.935,4.636,3.515,4.384,3.405,3.359,0.480,4.731,Sino-Tibetan
+P0201,sample_F_small_scale,4.865,4.149,3.702,4.627,3.983,5.010,0.680,5.031,Language isolate
+P0202,sample_F_small_scale,3.783,3.715,3.554,2.880,2.479,4.596,0.680,5.540,Language isolate
+P0203,sample_F_small_scale,5.638,3.488,2.502,4.263,5.111,4.533,0.680,5.284,Language isolate
+P0204,sample_F_small_scale,3.343,3.948,4.052,5.571,3.103,4.592,0.680,5.451,Language isolate
+P0205,sample_F_small_scale,3.222,2.844,4.219,3.101,3.124,5.307,0.680,4.945,Language isolate
+P0206,sample_F_small_scale,4.309,3.995,4.780,3.812,3.116,4.325,0.680,5.299,Language isolate
+P0207,sample_F_small_scale,5.586,4.444,3.135,4.170,2.818,3.774,0.680,4.968,Language isolate
+P0208,sample_F_small_scale,2.878,4.323,3.637,5.140,3.886,5.314,0.680,5.926,Language isolate
+P0209,sample_F_small_scale,4.328,4.050,4.111,4.022,4.427,4.341,0.680,5.196,Language isolate
+P0210,sample_F_small_scale,3.398,4.339,3.379,4.832,4.760,4.339,0.680,5.114,Language isolate
+P0211,sample_F_small_scale,3.458,4.843,2.214,4.007,3.871,4.581,0.680,4.604,Language isolate
+P0212,sample_F_small_scale,5.297,5.202,3.410,4.063,2.302,4.793,0.680,5.485,Language isolate
+P0213,sample_F_small_scale,4.600,4.356,3.488,4.663,2.945,3.953,0.680,5.576,Language isolate
+P0214,sample_F_small_scale,3.250,4.065,4.247,4.492,4.480,4.754,0.680,4.899,Language isolate
+P0215,sample_F_small_scale,3.852,3.967,4.546,4.499,3.428,5.207,0.680,5.349,Language isolate
+P0216,sample_F_small_scale,3.557,4.604,2.330,5.019,3.489,4.718,0.680,5.102,Language isolate
+P0217,sample_F_small_scale,3.207,4.235,3.772,5.061,3.377,5.235,0.680,4.902,Language isolate
+P0218,sample_F_small_scale,4.955,2.519,3.425,4.308,3.736,4.800,0.680,4.122,Language isolate
+P0219,sample_F_small_scale,2.643,4.011,2.971,4.504,4.532,4.315,0.680,5.305,Language isolate
+P0220,sample_F_small_scale,3.853,3.836,4.763,4.136,3.779,4.742,0.680,5.115,Language isolate
+P0221,sample_F_small_scale,4.649,4.194,4.904,4.166,3.259,4.348,0.680,5.120,Language isolate
+P0222,sample_F_small_scale,3.796,3.804,3.435,4.486,3.785,3.850,0.680,4.866,Language isolate
+P0223,sample_F_small_scale,3.890,4.509,3.467,3.682,3.075,3.762,0.680,5.520,Language isolate
+P0224,sample_F_small_scale,4.356,3.403,3.425,4.032,3.353,4.296,0.680,4.999,Language isolate
+P0225,sample_F_small_scale,4.865,3.823,4.463,4.740,3.617,3.198,0.680,5.477,Language isolate
+P0226,sample_F_small_scale,4.265,5.073,4.101,4.839,3.373,5.103,0.680,6.070,Language isolate
+P0227,sample_F_small_scale,3.948,3.993,2.130,4.118,5.049,4.427,0.680,5.021,Language isolate
+P0228,sample_F_small_scale,3.335,5.002,3.266,4.705,4.145,4.591,0.680,5.360,Language isolate
+P0229,sample_F_small_scale,3.716,3.881,4.151,5.366,2.826,3.645,0.680,4.737,Language isolate
+P0230,sample_F_small_scale,3.476,3.861,3.685,5.339,2.832,4.323,0.680,4.897,Language isolate
+P0231,sample_F_small_scale,4.200,5.072,3.231,4.179,3.865,4.511,0.680,5.125,Language isolate
+P0232,sample_F_small_scale,4.127,4.207,4.559,3.513,3.278,3.729,0.680,3.768,Language isolate
+P0233,sample_F_small_scale,4.333,3.800,4.112,5.678,2.822,4.107,0.680,5.038,Language isolate
+P0234,sample_F_small_scale,5.006,3.248,3.749,4.802,3.200,3.773,0.680,4.259,Language isolate
+P0235,sample_F_small_scale,4.791,4.924,3.277,4.996,2.871,4.779,0.680,5.066,Language isolate
+P0236,sample_F_small_scale,3.669,4.303,3.367,3.669,2.826,3.791,0.680,4.520,Language isolate
+P0237,sample_F_small_scale,4.349,4.248,2.700,4.047,3.278,4.944,0.680,4.625,Language isolate
+P0238,sample_F_small_scale,3.679,2.927,4.875,5.574,3.179,4.688,0.680,5.233,Language isolate
+P0239,sample_F_small_scale,4.969,4.557,2.110,4.714,2.856,4.708,0.680,5.542,Language isolate
+P0240,sample_F_small_scale,3.659,4.352,3.519,3.451,3.669,4.841,0.680,5.392,Language isolate

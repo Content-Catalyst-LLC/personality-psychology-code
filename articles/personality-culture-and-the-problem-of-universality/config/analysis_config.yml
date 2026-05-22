@@ -1,0 +1,17 @@
+article_slug: personality-culture-and-the-problem-of-universality
+dataset: data/synthetic_personality_culture_universality.csv
+outputs_dir: outputs
+traits:
+  - openness
+  - conscientiousness
+  - extraversion
+  - agreeableness
+  - neuroticism
+  - honesty_humility
+group_column: culture_group
+context_column: context_collectivism
+behavior_column: behavioral_manifestation
+notes:
+  - Synthetic data only.
+  - Do not use for diagnosis, selection, screening, or population ranking.
+  - Interpret cross-cultural comparisons through measurement and context.
