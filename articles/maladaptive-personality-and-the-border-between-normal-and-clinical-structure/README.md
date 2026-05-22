@@ -47,11 +47,15 @@ Rscript r/analyze_maladaptive_personality.R
 sqlite3 outputs/maladaptive_personality.sqlite < sql/schema_and_queries.sql
 ```
 
-## Responsible research use
+## Responsible Research Use
 
-This repository is for reproducible, educational, and research-oriented analysis. It is not a diagnostic system, clinical decision-support tool, hiring or screening workflow, risk scoring system, or substitute for qualified clinical assessment.
+This repository provides a transparent research scaffold for studying the boundary between ordinary personality variation and maladaptive clinical structure. Its purpose is to support reproducible method development: synthetic data generation, dimensional construct modeling, threshold-zone analysis, cross-language workflow validation, and careful documentation of how traits, functioning impairment, rigidity, pervasiveness, context, and support can be represented analytically.
 
-The dataset is synthetic. It does not describe real people, patients, diagnoses, treatment programs, clinical records, workplaces, or health systems. The purpose is transparent methodological scaffolding, not claims about actual clinical populations.
+The synthetic dataset is included so the workflow can be inspected, replicated, and extended without relying on sensitive clinical records. Its patterns are constructed examples for testing model architecture, not empirical claims about actual people, clinical populations, treatment programs, workplaces, or health systems.
+
+The interpretive standard is disciplined and formulation-oriented. Maladaptive personality should be understood through the convergence of trait burden, impairment in self and interpersonal functioning, rigidity, pervasiveness, contextual stress, and available support. Elevated traits alone do not establish clinical significance. Clinical significance emerges when personality structure becomes persistently inflexible, impairing, and difficult to adapt across relationships, identity, emotion, and social life.
+
+This scaffold is best used to clarify concepts, test reproducible workflows, and support careful research design. It preserves the distinction between methodological modeling and qualified clinical judgment while treating maladaptive personality as a serious dimensional problem rather than a casual label or moral verdict.
 
 GitHub directory:
 
