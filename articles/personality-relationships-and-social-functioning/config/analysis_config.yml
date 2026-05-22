@@ -1,0 +1,28 @@
+article_slug: personality-relationships-and-social-functioning
+dataset: data/synthetic_personality_relationships_social_functioning.csv
+outputs_dir: outputs
+traits:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+relational_capacities:
+  - empathy
+  - self_regulation
+  - attachment_security
+  - perceived_support
+context_columns:
+  - social_context
+  - relationship_domain
+outcomes:
+  - relationship_satisfaction
+  - social_functioning
+  - loneliness
+  - conflict_frequency
+  - reciprocity_quality
+  - reputation_trust
+notes:
+  - Synthetic data only.
+  - Designed for reproducible relational-personality modeling examples.
+  - Interpret outputs as workflow demonstrations, not relationship assessment tools.
