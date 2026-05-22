@@ -1,0 +1,32 @@
+article_slug: personality-wellbeing-and-mental-health
+dataset: data/synthetic_personality_wellbeing_mental_health.csv
+outputs_dir: outputs
+traits:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+pathway_columns:
+  - coping_effectiveness
+  - perceived_support
+  - stress_burden
+  - treatment_access
+  - sleep_quality
+wellbeing_columns:
+  - positive_affect
+  - negative_affect
+  - life_satisfaction
+  - meaning_purpose
+context_columns:
+  - age_band
+  - life_context
+outcomes:
+  - wellbeing_score
+  - distress_score
+  - flourishing_score
+  - social_functioning
+notes:
+  - Synthetic data only.
+  - Designed for reproducible personality-wellbeing and mental-health modeling examples.
+  - Interpret outputs as workflow demonstrations, not clinical assessment tools.
