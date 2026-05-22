@@ -1,0 +1,30 @@
+article_slug: traits-character-and-moral-evaluation
+dataset: data/synthetic_traits_character_morality.csv
+outputs_dir: outputs
+descriptive_traits:
+  - honesty_humility
+  - conscientiousness
+  - agreeableness
+  - emotional_stability
+  - openness
+moral_layers:
+  - moral_identity
+  - practical_judgment
+context_columns:
+  - evaluation_context
+  - institutional_accountability
+  - power_pressure
+  - social_desirability_pressure
+outcomes:
+  - ethical_behavior
+  - integrity_rating
+  - trustworthiness_rating
+derived_constructs:
+  - descriptive_trait_reliability
+  - moral_character_index
+  - judgment_context_index
+  - trait_character_gap
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for moral ranking, hiring, social sorting, clinical assessment, or legal evaluation.
