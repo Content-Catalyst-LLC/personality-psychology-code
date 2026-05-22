@@ -1,30 +1,49 @@
-# Responsible Use
+# Responsible Research Use
 
-This repository is a research and education scaffold. It should not be used as a psychological assessment system.
+This repository supports reproducible analysis of cross-cultural personality structure, measurement fit, and universality claims. It is intended as a transparent research scaffold: a way to examine how trait models travel across cultural contexts, where they remain useful, and where they require revision.
 
-## Not intended for
+## Research purpose
 
-- Clinical diagnosis
-- Personality testing of real people
-- Hiring, promotion, or workplace screening
-- School placement
-- Immigration, security, or eligibility decisions
-- Ranking cultures, nations, ethnic groups, or populations
-- Inferring character from group membership
+The central purpose of this repository is to support careful analysis of:
+
+- broad trait recurrence across cultural groups
+- Big Five and Big Six / HEXACO-style model comparison
+- measurement fit and partial invariance
+- culturally specific trait meanings
+- behavioral manifestation across social contexts
+- the difference between structural similarity and strong universality
+
+The included dataset is synthetic. It is designed to make the code reproducible and inspectable without relying on private participant data or implying claims about actual populations.
 
 ## Interpretation principles
 
-Cross-cultural personality comparisons require caution because observed scores may reflect:
+Cross-cultural personality evidence should be interpreted cautiously. Apparent group differences may reflect many sources, including:
 
 - translation effects
 - response styles
 - sampling differences
-- survey familiarity
-- local self-presentation norms
-- scale-functioning differences
-- unequal access to research infrastructure
-- culturally specific meanings of trait language
+- educational and survey familiarity
+- local norms of self-description
+- cultural expectations about modesty, restraint, assertiveness, or emotional expression
+- differences in item meaning across languages
+- partial measurement non-equivalence
 
-## Ethical stance
+Divergence from an imported model should not be treated as deficiency. It may indicate that the theory is incomplete, the instrument is not well adapted, the translation is insufficient, or the local culture organizes personhood through concepts the model does not fully capture.
 
-Divergence from a Western-origin model should not be treated as deficiency. It may indicate incomplete theory, inadequate translation, local trait concepts, or different social organization of personhood.
+## Appropriate use
+
+This scaffold is appropriate for:
+
+- reproducible research demonstrations
+- educational workflows
+- methodological prototyping
+- synthetic-data testing
+- cross-cultural measurement examples
+- article companion code
+- transparent discussion of model limits
+
+## Boundary of interpretation
+
+The repository should not be used to rank cultures, diagnose individuals, screen applicants, evaluate workers, or make claims about the character of real populations. Those uses would violate the methodological purpose of the project and misunderstand what synthetic-data workflows can support.
+
+The intended standard is disciplined comparison: use trait models where they clarify, test them where they travel, revise them where they fail, and treat cultural difference as evidence rather than error.

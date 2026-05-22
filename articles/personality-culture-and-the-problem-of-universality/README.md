@@ -145,9 +145,15 @@ Generated outputs are written to `outputs/`, including:
 - simple trait-context model outputs
 - validation reports
 
-## Responsible use
+## Responsible Research Use
 
-This repository is not a clinical, diagnostic, employment-screening, hiring, personality-testing, workplace-selection, or population-ranking tool. It is a research scaffold for thinking carefully about cross-cultural personality structure and measurement. The examples use synthetic data only.
+This repository is designed for reproducible, research-oriented analysis of cross-cultural personality structure. Its purpose is to support careful thinking about trait models, measurement fit, cultural context, and the limits of universality claims.
+
+The examples use synthetic data so the workflows can be inspected, adapted, and extended without relying on private participant records or making claims about real populations. The emphasis is on transparent methods, reproducible code, and disciplined interpretation.
+
+Cross-cultural personality analysis should be handled with particular care. Apparent group differences may reflect translation, sampling, response style, survey familiarity, local norms of self-description, or measurement non-equivalence rather than stable differences in personality. For that reason, this repository treats cultural variation as a methodological and theoretical question, not as a basis for ranking people or populations.
+
+The strongest use of this scaffold is comparative and interpretive: testing whether broad trait structures travel, examining where they do not, and asking what those limits reveal about personality, culture, language, and social context.
 
 ## Companion article
 
