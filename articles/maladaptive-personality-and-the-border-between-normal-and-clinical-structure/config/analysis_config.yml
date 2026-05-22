@@ -1,0 +1,28 @@
+article_slug: maladaptive-personality-and-the-border-between-normal-and-clinical-structure
+dataset: data/synthetic_maladaptive_personality_structure.csv
+outputs_dir: outputs
+maladaptive_trait_domains:
+  - negative_affectivity
+  - detachment
+  - antagonism
+  - disinhibition
+  - psychoticism
+  - anankastia
+functioning_columns:
+  - identity_impairment
+  - self_direction_impairment
+  - empathy_impairment
+  - intimacy_impairment
+boundary_columns:
+  - rigidity
+  - pervasiveness
+  - contextual_stress
+  - perceived_support
+outcomes:
+  - clinical_severity
+  - clinical_liability
+  - threshold_zone_indicator
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for diagnosis, screening, hiring, clinical decisions, or risk scoring.
