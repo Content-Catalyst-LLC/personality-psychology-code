@@ -1,0 +1,31 @@
+article_slug: behavior-genetics-and-the-biological-basis-of-personality
+dataset: data/synthetic_personality_twin_data.csv
+outputs_dir: outputs
+identifiers:
+  - pair_id
+  - zygosity
+trait_columns:
+  - twin1_trait
+  - twin2_trait
+  - twin1_temperament_reactivity
+  - twin2_temperament_reactivity
+  - twin1_effortful_control
+  - twin2_effortful_control
+environment_columns:
+  - family_stress
+  - social_support
+  - socioeconomic_security
+  - educational_stability
+  - nonshared_environment_index
+  - shared_environment_index
+derived_columns:
+  - trait_mean
+  - trait_difference
+  - genetic_relatedness
+  - gxe_marker
+  - rge_marker
+  - developmental_context_score
+notes:
+  - Synthetic twin-style data only.
+  - Professional education, research prototyping, consulting support, and methodological demonstration are appropriate uses.
+  - Not a standalone genetic assessment, screening, prediction, or decision system.
