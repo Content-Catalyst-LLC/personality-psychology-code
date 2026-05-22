@@ -1,4 +1,7 @@
 [package]
-name = "personality_psychology_utility"
+name = "personality_creativity_summary"
 version = "0.1.0"
 edition = "2021"
+
+[dependencies]
+csv = "1"
