@@ -1,0 +1,32 @@
+article_slug: personality-dynamics-traits-states-and-situational-variability
+dataset: data/synthetic_personality_dynamics_data.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - assessment_context
+  - occasion
+trait_columns:
+  - trait_extraversion
+  - trait_conscientiousness
+  - trait_neuroticism
+state_columns:
+  - state_extraversion
+  - state_conscientiousness
+  - state_neuroticism
+situation_columns:
+  - situation_valence
+  - situation_sociality
+  - situation_demand
+  - situation_evaluation
+affect_and_process_columns:
+  - positive_affect
+  - negative_affect
+  - goal_pressure
+  - autonomy_support
+derived_targets:
+  - dynamic_signature_score
+  - state_inertia_marker
+notes:
+  - Synthetic repeated-measures data only.
+  - Professional education, research prototyping, consulting support, and methodological demonstration are appropriate uses.
+  - Not a standalone assessment or decision system for consequential decisions about individuals.
