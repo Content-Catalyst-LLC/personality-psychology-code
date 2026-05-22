@@ -1,0 +1,29 @@
+article_slug: personality-and-physical-health-across-the-lifespan
+dataset: data/synthetic_personality_physical_health_lifespan.csv
+outputs_dir: outputs
+traits:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+  - emotional_stability
+health_behavior_columns:
+  - exercise
+  - sleep_quality
+  - smoking_risk
+  - alcohol_risk
+  - medication_adherence
+context_columns:
+  - age_band
+  - life_context
+  - perceived_support
+  - stress_burden
+outcomes:
+  - physical_health_score
+  - functional_ability
+  - chronic_condition_burden
+notes:
+  - Synthetic data only.
+  - Designed for reproducible lifespan personality-health modeling examples.
+  - Interpret outputs as workflow demonstrations, not clinical prediction tools.
