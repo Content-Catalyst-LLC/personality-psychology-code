@@ -1,8 +1,18 @@
-fn personality_organization(trait: f64, motive: f64, identity: f64, regulation: f64, adaptation: f64, pressure: f64) -> f64 {
-    0.18 * trait + 0.16 * motive + 0.18 * identity + 0.18 * regulation + 0.14 * adaptation - 0.20 * pressure
-}
-
+use std::{collections::HashMap, fs, path::Path};
 fn main() {
-    let score = personality_organization(0.78, 0.72, 0.68, 0.74, 0.63, 0.22);
-    println!("Personality organization score: {:.3}", score);
+    let root = Path::new("..");
+    let content = fs::read_to_string(root.join("data/synthetic_types_traits_dimensional_models.csv")).unwrap();
+    let mut lines = content.lines();
+    let header: Vec<&str> = lines.next().unwrap().split(',').collect();
+    let profile_col = header.iter().position(|h| *h == "profile_type").unwrap();
+    let mut counts: HashMap<String, usize> = HashMap::new();
+    for line in lines {
+        let f: Vec<&str> = line.split(',').collect();
+        *counts.entry(f[profile_col].to_string()).or_insert(0) += 1;
+    }
+    let out_dir = root.join("outputs"); fs::create_dir_all(&out_dir).unwrap();
+    let mut out = String::from("profile_type,n\n");
+    for (k, n) in counts { out.push_str(&format!("{},{}\n", k, n)); }
+    fs::write(out_dir.join("rust_profile_type_counts.csv"), out).unwrap();
+    println!("Wrote Rust output.");
 }

@@ -1,0 +1,34 @@
+article_slug: personality-types-and-personality-traits-categorical-and-dimensional-models-compared
+dataset: data/synthetic_types_traits_dimensional_models.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - assessment_context
+trait_columns:
+  - extraversion
+  - agreeableness
+  - conscientiousness
+  - neuroticism
+  - openness
+categorical_columns:
+  - extraversion_category
+  - conscientiousness_category
+  - neuroticism_category
+  - profile_type
+cluster_columns:
+  - synthetic_cluster
+  - near_cluster_boundary
+  - cluster_boundary_margin
+measurement_fields:
+  - nearest_threshold_distance
+  - near_threshold_boundary
+  - dimensional_signal_strength
+  - information_loss_index
+outcomes:
+  - well_being
+  - collaboration_score
+  - reflective_utility_score
+notes:
+  - Synthetic data only.
+  - Professional education, research prototyping, consulting support, and methodological demonstration are appropriate uses.
+  - Not a standalone assessment or decision system for consequential decisions about individuals.
