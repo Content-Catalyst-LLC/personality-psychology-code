@@ -1,0 +1,37 @@
+article_slug: motivation-goals-and-the-architecture-of-desire
+dataset: data/synthetic_motivation_goals_desire.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - motivation_context
+goal_columns:
+  - autonomy_goal
+  - achievement_goal
+  - belonging_goal
+  - security_goal
+  - meaning_goal
+  - status_goal
+need_support_columns:
+  - autonomy_support
+  - competence_support
+  - relatedness_support
+regulation_columns:
+  - goal_conflict
+  - goal_ownership
+  - conscientiousness
+  - persistence_score
+  - adaptive_disengagement
+outcomes:
+  - well_being
+derived_constructs:
+  - total_goal_intensity
+  - approach_orientation
+  - avoidance_security_orientation
+  - status_orientation
+  - need_support
+  - motivational_quality
+  - life_direction_coherence
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for moral ranking, clinical assessment, personality testing, workplace screening, educational placement, legal evaluation, or individual prediction.
