@@ -1,0 +1,28 @@
+article_slug: social-cognitive-approaches-to-personality-goals-appraisals-and-self-regulation
+dataset: data/synthetic_social_cognitive_personality.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - occasion
+  - situation_type
+process_columns:
+  - goal_activation
+  - threat_appraisal
+  - challenge_appraisal
+  - self_efficacy
+  - self_regulation
+  - emotional_arousal
+  - perceived_support
+outcomes:
+  - prosocial_behavior
+  - avoidance_behavior
+  - task_persistence
+derived_constructs:
+  - appraisal_balance
+  - regulation_capacity
+  - approach_orientation
+  - avoidance_pressure
+notes:
+  - Synthetic repeated-measures data only.
+  - Educational and research-oriented workflow.
+  - Not for personality testing, clinical assessment, school placement, workplace screening, or individual ranking.
