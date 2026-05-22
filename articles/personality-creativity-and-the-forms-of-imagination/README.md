@@ -2,7 +2,7 @@
 
 This directory provides professional research scaffolding for the article **“Personality, Creativity, and the Forms of Imagination”** in the Personality Psychology knowledge series.
 
-The project treats creativity as a multi-component outcome shaped by personality traits, domain knowledge, persistence, social support, domain context, and measurement choices. It is designed for reproducible demonstration, teaching, exploratory modeling, and transparent computational reasoning.
+The project treats creativity as a multi-component outcome shaped by personality traits, domain knowledge, persistence, social support, domain context, measurement design, and institutional opportunity. The examples are synthetic and reproducible so the modeling logic can be inspected clearly.
 
 ## Research purpose
 
@@ -10,25 +10,25 @@ This repository supports three linked questions:
 
 1. How do openness, intellect, conscientiousness, persistence, and social support relate to divergent thinking?
 2. How do the same factors relate to creative achievement and everyday creativity?
-3. How does the interpretation change when creative outcomes are separated rather than collapsed into a single creativity score?
+3. How does interpretation change when creative outcomes are separated rather than collapsed into one creativity score?
 
 The structure deliberately separates:
 
 - **Divergent thinking** as ideational generation.
 - **Creative achievement** as realized and recognized output.
 - **Everyday creativity** as adaptive imagination in ordinary life.
-- **Domain context** as a factor that can modify trait-outcome relations.
+- **Domain context** as a modifier of trait-outcome relationships.
 
 ## Directory structure
 
 ```text
 personality-creativity-and-the-forms-of-imagination/
 ├── c/                         # C implementation of descriptive statistics
-├── cpp/                       # C++ implementation of correlation-style summaries
+├── cpp/                       # C++ summary workflow
 ├── data/                      # Synthetic data, dictionary, and provenance notes
-├── docs/                      # Methods, reproducibility, and responsible-use notes
+├── docs/                      # Methods, reproducibility, responsible use
 ├── fortran/                   # Fortran numerical summary example
-├── go/                        # Go CLI-style data summary utility
+├── go/                        # Go CLI-style summary utility
 ├── julia/                     # Julia modeling workflow
 ├── notebooks/                 # Jupyter notebook scaffold
 ├── outputs/
@@ -36,20 +36,20 @@ personality-creativity-and-the-forms-of-imagination/
 │   └── tables/                # Generated tables/model summaries
 ├── python/                    # Python analysis workflow
 ├── r/                         # R analysis workflow
-├── rust/                      # Rust data validation and summary example
+├── rust/                      # Rust validation and summary example
 ├── sql/                       # SQL schema and analytic queries
-└── validation/                # Cross-language validation notes and run script
+└── validation/                # Cross-language validation script
 ```
 
 ## Data
 
-The included dataset is synthetic and intentionally small. It is designed to make the modeling logic inspectable rather than to estimate real population effects.
-
-Primary file:
+Primary demonstration data:
 
 ```text
 data/synthetic_personality_creativity.csv
 ```
+
+The dataset is synthetic and intentionally compact. It is designed to demonstrate model structure, data documentation, validation, and reproducible analysis. It is not a human-subject dataset.
 
 Core variables include:
 
@@ -105,7 +105,7 @@ Run Julia:
 julia julia/analyze_personality_creativity.jl
 ```
 
-Run validation summary:
+Run validation:
 
 ```bash
 bash validation/run_validation.sh
@@ -121,7 +121,7 @@ C_i = \alpha + \beta_1 O_i + \beta_2 D_i + \beta_3 E_i + \beta_4 S_i + \varepsil
 
 where \(C_i\) is a creative outcome, \(O_i\) is openness-related disposition, \(D_i\) is domain knowledge or domain context, \(E_i\) is execution/persistence capacity, and \(S_i\) is social support or opportunity.
 
-The computational examples are intended to demonstrate:
+The computational examples demonstrate:
 
 - descriptive statistics;
 - correlation matrices;
@@ -132,21 +132,17 @@ The computational examples are intended to demonstrate:
 
 ## Responsible use
 
-This repository is for research demonstration, teaching, and reproducible workflow development. The examples should not be used for clinical diagnosis, psychological screening, hiring selection, workplace evaluation, educational tracking, or individual assessment.
+These examples are for research demonstration, teaching, and transparent workflow development. They should not be used for clinical diagnosis, psychological screening, hiring selection, workplace evaluation, educational tracking, or individual assessment.
 
-The central interpretive rule is simple: personality traits describe probabilistic tendencies at group level. They should not be converted into deterministic labels about individual creative worth.
+Personality traits describe probabilistic tendencies at group level. They should not be converted into deterministic labels about individual creative worth.
 
 ## Reproducibility
 
-The repository favors simple, inspectable examples over hidden dependencies. The Python and R workflows write outputs into:
+The workflows write outputs into:
 
 ```text
 outputs/tables/
 outputs/figures/
 ```
 
-The validation script checks that the expected data and workflow files exist.
-
-## Citation note
-
-When reusing or adapting this material, cite the associated article and repository path.
+The validation script checks whether required folders and files exist and whether the main synthetic dataset is readable.

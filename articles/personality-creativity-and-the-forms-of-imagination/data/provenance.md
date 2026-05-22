@@ -1,17 +1,12 @@
 # Data Provenance
 
-The dataset in this directory is synthetic. It was constructed for reproducible demonstration of the article’s conceptual model.
+The dataset in this directory is synthetic. It was generated manually for transparent demonstration of research workflows related to personality and creativity.
 
-## Design choices
+The data are designed to make the article's conceptual distinctions visible:
 
-The synthetic values are shaped to make the following patterns visible:
+- openness and intellect are positively associated with creative outcomes;
+- persistence and social support are especially relevant to creative achievement;
+- divergent thinking, creative achievement, and everyday creativity are related but distinct;
+- domain context matters for interpretation.
 
-- openness is positively associated with divergent thinking;
-- intellect is especially relevant for scientific and technical examples;
-- persistence and social support contribute to creative achievement;
-- everyday creativity is treated as related to, but distinct from, public creative achievement;
-- domain context affects interpretation.
-
-## Reuse
-
-The dataset may be used for teaching, demonstrations, exploratory code examples, and repository validation.
+The dataset contains no human-subject records, no personally identifiable information, and no clinical or assessment data.

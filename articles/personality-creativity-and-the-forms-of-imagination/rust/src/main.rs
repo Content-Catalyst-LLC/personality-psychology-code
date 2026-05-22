@@ -1,32 +1,26 @@
-use std::error::Error;
+use std::fs;
+use std::path::Path;
 
-fn main() -> Result<(), Box<dyn Error>> {
-    let mut reader = csv::Reader::from_path("../data/synthetic_personality_creativity.csv")
-        .or_else(|_| csv::Reader::from_path("data/synthetic_personality_creativity.csv"))?;
-
-    let headers = reader.headers()?.clone();
-
-    let openness_idx = headers.iter().position(|h| h == "openness").unwrap();
-    let divergent_idx = headers.iter().position(|h| h == "divergent_thinking").unwrap();
-    let achievement_idx = headers.iter().position(|h| h == "creative_achievement").unwrap();
+fn main() {
+    let path = Path::new("../data/synthetic_personality_creativity.csv");
+    let text = fs::read_to_string(path).expect("could not read synthetic data");
+    let mut lines = text.lines();
+    let headers: Vec<&str> = lines.next().expect("missing header").split(',').collect();
+    let openness_idx = headers.iter().position(|h| *h == "openness").unwrap();
+    let achievement_idx = headers.iter().position(|h| *h == "creative_achievement").unwrap();
 
     let mut n = 0.0;
     let mut openness_sum = 0.0;
-    let mut divergent_sum = 0.0;
     let mut achievement_sum = 0.0;
 
-    for result in reader.records() {
-        let record = result?;
+    for line in lines {
+        let fields: Vec<&str> = line.split(',').collect();
+        openness_sum += fields[openness_idx].parse::<f64>().unwrap();
+        achievement_sum += fields[achievement_idx].parse::<f64>().unwrap();
         n += 1.0;
-        openness_sum += record[openness_idx].parse::<f64>()?;
-        divergent_sum += record[divergent_idx].parse::<f64>()?;
-        achievement_sum += record[achievement_idx].parse::<f64>()?;
     }
 
-    println!("Rows: {}", n as i64);
-    println!("Mean openness: {:.2}", openness_sum / n);
-    println!("Mean divergent thinking: {:.2}", divergent_sum / n);
-    println!("Mean creative achievement: {:.2}", achievement_sum / n);
-
-    Ok(())
+    println!("Rust summary utility");
+    println!("mean openness: {:.2}", openness_sum / n);
+    println!("mean creative achievement: {:.2}", achievement_sum / n);
 }

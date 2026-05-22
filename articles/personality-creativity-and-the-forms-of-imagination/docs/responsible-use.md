@@ -1,23 +1,14 @@
 # Responsible Use
 
-This repository demonstrates computational reasoning about personality and creativity. It is not a psychometric instrument.
+This repository is designed for research demonstration, teaching, transparent modeling, and reproducible workflow development.
 
-## Appropriate uses
-
-- teaching;
-- reproducible workflow examples;
-- article companion code;
-- exploratory modeling demonstrations;
-- discussion of measurement and interpretation.
-
-## Inappropriate uses
+It should not be used for:
 
 - clinical diagnosis;
-- hiring or promotion decisions;
-- student tracking;
-- individual psychological assessment;
-- scoring real people without consent, validation, and ethical review.
+- psychological screening;
+- hiring or workplace evaluation;
+- ranking individuals by creative worth;
+- educational tracking;
+- personality assessment of real people.
 
-## Interpretive rule
-
-Trait-outcome associations are group-level and probabilistic. They should not be turned into deterministic claims about individual creative worth.
+Personality traits are probabilistic, contextual, and measurement-dependent. They should not be treated as deterministic labels.

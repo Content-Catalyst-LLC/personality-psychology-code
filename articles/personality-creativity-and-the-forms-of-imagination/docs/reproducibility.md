@@ -1,33 +1,19 @@
-# Reproducibility
+# Reproducibility Notes
 
-## Minimal dependencies
+## Inputs
 
-Python:
+- `data/synthetic_personality_creativity.csv`
+- `data/data_dictionary.md`
+- `data/provenance.md`
 
-```bash
-pip install pandas numpy statsmodels matplotlib
-```
+## Outputs
 
-R:
+Generated files should be written to:
 
-```r
-install.packages(c("readr", "dplyr", "ggplot2", "broom"))
-```
+- `outputs/tables/`
+- `outputs/figures/`
 
-SQLite:
-
-```bash
-sqlite3 --version
-```
-
-Julia:
-
-```julia
-import Pkg
-Pkg.add(["CSV", "DataFrames", "Statistics", "GLM", "StatsModels"])
-```
-
-## Recommended order
+## Recommended execution order
 
 ```bash
 python3 python/analyze_personality_creativity.py
@@ -36,14 +22,6 @@ sqlite3 outputs/tables/personality_creativity.sqlite < sql/schema_and_queries.sq
 bash validation/run_validation.sh
 ```
 
-## Expected outputs
+## Dependency philosophy
 
-```text
-outputs/tables/python_correlation_matrix.csv
-outputs/tables/python_model_coefficients.csv
-outputs/tables/r_model_coefficients.csv
-outputs/figures/python_openness_divergent_thinking.png
-outputs/figures/python_openness_creative_achievement.png
-outputs/figures/r_openness_divergent_thinking.png
-outputs/figures/r_openness_creative_achievement.png
-```
+The examples use light dependencies and standard formats so they can be inspected, ported, and adapted easily.

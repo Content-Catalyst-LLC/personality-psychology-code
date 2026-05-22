@@ -1,23 +1,21 @@
--- SQLite workflow for synthetic personality-creativity data.
--- Run from article directory:
--- sqlite3 outputs/tables/personality_creativity.sqlite < sql/schema_and_queries.sql
+-- SQLite schema and analytic queries for synthetic personality-creativity data.
 
 DROP TABLE IF EXISTS personality_creativity;
 
 CREATE TABLE personality_creativity (
-  participant_id TEXT PRIMARY KEY,
-  domain TEXT NOT NULL,
-  openness REAL NOT NULL,
-  intellect REAL NOT NULL,
-  conscientiousness REAL NOT NULL,
-  extraversion REAL NOT NULL,
-  agreeableness REAL NOT NULL,
-  neuroticism REAL NOT NULL,
-  persistence REAL NOT NULL,
-  social_support REAL NOT NULL,
-  divergent_thinking REAL NOT NULL,
-  creative_achievement REAL NOT NULL,
-  everyday_creativity REAL NOT NULL
+  id INTEGER PRIMARY KEY,
+  openness REAL,
+  intellect REAL,
+  conscientiousness REAL,
+  extraversion REAL,
+  agreeableness REAL,
+  neuroticism REAL,
+  persistence REAL,
+  social_support REAL,
+  domain TEXT,
+  divergent_thinking REAL,
+  creative_achievement REAL,
+  everyday_creativity REAL
 );
 
 .mode csv
@@ -26,12 +24,12 @@ CREATE TABLE personality_creativity (
 .headers on
 .mode column
 
--- Domain-level outcome summaries.
+.output outputs/tables/sql_domain_summary.txt
 SELECT
   domain,
+  COUNT(*) AS n,
   ROUND(AVG(openness), 2) AS mean_openness,
   ROUND(AVG(intellect), 2) AS mean_intellect,
-  ROUND(AVG(persistence), 2) AS mean_persistence,
   ROUND(AVG(divergent_thinking), 2) AS mean_divergent_thinking,
   ROUND(AVG(creative_achievement), 2) AS mean_creative_achievement,
   ROUND(AVG(everyday_creativity), 2) AS mean_everyday_creativity
@@ -39,17 +37,18 @@ FROM personality_creativity
 GROUP BY domain
 ORDER BY domain;
 
--- High-level synthetic profile records.
+.output outputs/tables/sql_high_support_cases.txt
 SELECT
-  participant_id,
+  id,
   domain,
   openness,
   intellect,
   persistence,
   social_support,
-  divergent_thinking,
-  creative_achievement,
-  everyday_creativity
+  creative_achievement
 FROM personality_creativity
-ORDER BY creative_achievement DESC
-LIMIT 10;
+WHERE social_support >= 75
+ORDER BY creative_achievement DESC;
+
+.output stdout
+SELECT 'SQL analysis complete. Outputs written to outputs/tables/.' AS status;

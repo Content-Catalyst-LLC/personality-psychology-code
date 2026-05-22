@@ -1,57 +1,27 @@
 #!/usr/bin/env python3
 """Analyze synthetic personality-creativity data.
 
-This script demonstrates a transparent companion workflow for the article
-"Personality, Creativity, and the Forms of Imagination."
-
-Outputs are written to outputs/tables and outputs/figures.
+This script creates descriptive summaries, correlations, simple OLS models,
+and scatter plots for the article scaffold. It uses synthetic data only.
 """
 
 from __future__ import annotations
 
 from pathlib import Path
 
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-import statsmodels.formula.api as smf
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA_PATH = ROOT / "data" / "synthetic_personality_creativity.csv"
+TABLE_DIR = ROOT / "outputs" / "tables"
+FIGURE_DIR = ROOT / "outputs" / "figures"
+TABLE_DIR.mkdir(parents=True, exist_ok=True)
+FIGURE_DIR.mkdir(parents=True, exist_ok=True)
 
 
-ARTICLE_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH = ARTICLE_DIR / "data" / "synthetic_personality_creativity.csv"
-TABLE_DIR = ARTICLE_DIR / "outputs" / "tables"
-FIGURE_DIR = ARTICLE_DIR / "outputs" / "figures"
-
-
-def ensure_output_dirs() -> None:
-    TABLE_DIR.mkdir(parents=True, exist_ok=True)
-    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def load_data() -> pd.DataFrame:
+def main() -> int:
     df = pd.read_csv(DATA_PATH)
-    required = {
-        "participant_id",
-        "domain",
-        "openness",
-        "intellect",
-        "conscientiousness",
-        "extraversion",
-        "agreeableness",
-        "neuroticism",
-        "persistence",
-        "social_support",
-        "divergent_thinking",
-        "creative_achievement",
-        "everyday_creativity",
-    }
-    missing = sorted(required.difference(df.columns))
-    if missing:
-        raise ValueError(f"Missing required columns: {missing}")
-    return df
 
-
-def write_descriptive_outputs(df: pd.DataFrame) -> None:
     numeric_cols = [
         "openness",
         "intellect",
@@ -66,93 +36,56 @@ def write_descriptive_outputs(df: pd.DataFrame) -> None:
         "everyday_creativity",
     ]
 
-    desc = df[numeric_cols].describe().T
-    desc.to_csv(TABLE_DIR / "python_descriptive_statistics.csv")
+    df[numeric_cols].describe().round(2).to_csv(TABLE_DIR / "python_descriptive_statistics.csv")
+    df[numeric_cols].corr().round(3).to_csv(TABLE_DIR / "python_correlation_matrix.csv")
+    df.groupby("domain")[numeric_cols[-3:]].mean().round(2).to_csv(TABLE_DIR / "python_domain_outcome_means.csv")
 
-    corr = df[numeric_cols].corr(numeric_only=True)
-    corr.to_csv(TABLE_DIR / "python_correlation_matrix.csv")
+    try:
+        import statsmodels.formula.api as smf
 
+        model_dt = smf.ols(
+            "divergent_thinking ~ openness + intellect + conscientiousness + persistence + social_support",
+            data=df,
+        ).fit()
+        model_ca = smf.ols(
+            "creative_achievement ~ openness + intellect + conscientiousness + persistence + social_support",
+            data=df,
+        ).fit()
+        model_domain = smf.ols(
+            "creative_achievement ~ openness * C(domain) + intellect * C(domain) + persistence + social_support",
+            data=df,
+        ).fit()
 
-def fit_models(df: pd.DataFrame) -> pd.DataFrame:
-    formulas = {
-        "divergent_thinking": (
-            "divergent_thinking ~ openness + intellect + conscientiousness + "
-            "extraversion + agreeableness + neuroticism"
-        ),
-        "creative_achievement": (
-            "creative_achievement ~ openness + intellect + conscientiousness + "
-            "persistence + social_support + C(domain)"
-        ),
-        "everyday_creativity": (
-            "everyday_creativity ~ openness + intellect + conscientiousness + "
-            "extraversion + agreeableness + persistence + social_support + C(domain)"
-        ),
-    }
+        (TABLE_DIR / "python_model_divergent_thinking.txt").write_text(model_dt.summary().as_text())
+        (TABLE_DIR / "python_model_creative_achievement.txt").write_text(model_ca.summary().as_text())
+        (TABLE_DIR / "python_model_domain_sensitive.txt").write_text(model_domain.summary().as_text())
+    except Exception as exc:
+        (TABLE_DIR / "python_model_notes.txt").write_text(
+            f"statsmodels model fitting was skipped: {exc}\n"
+        )
 
-    rows = []
-    for model_name, formula in formulas.items():
-        model = smf.ols(formula=formula, data=df).fit()
-        for term, coef, pvalue in zip(model.params.index, model.params.values, model.pvalues.values):
-            rows.append(
-                {
-                    "model": model_name,
-                    "term": term,
-                    "coefficient": coef,
-                    "p_value": pvalue,
-                    "r_squared": model.rsquared,
-                    "n": int(model.nobs),
-                }
-            )
+    try:
+        import matplotlib.pyplot as plt
 
-    results = pd.DataFrame(rows)
-    results.to_csv(TABLE_DIR / "python_model_coefficients.csv", index=False)
-    return results
+        for x, y, name in [
+            ("openness", "divergent_thinking", "openness_divergent_thinking"),
+            ("openness", "creative_achievement", "openness_creative_achievement"),
+            ("persistence", "creative_achievement", "persistence_creative_achievement"),
+        ]:
+            fig, ax = plt.subplots(figsize=(7, 5))
+            ax.scatter(df[x], df[y], alpha=0.75)
+            ax.set_xlabel(x.replace("_", " ").title())
+            ax.set_ylabel(y.replace("_", " ").title())
+            ax.set_title(f"{x.replace('_', ' ').title()} and {y.replace('_', ' ').title()}")
+            fig.tight_layout()
+            fig.savefig(FIGURE_DIR / f"{name}.png", dpi=300)
+            plt.close(fig)
+    except Exception as exc:
+        (TABLE_DIR / "python_plot_notes.txt").write_text(f"plotting was skipped: {exc}\n")
 
-
-def plot_relationship(df: pd.DataFrame, x_col: str, y_col: str, file_name: str) -> None:
-    x = df[x_col].to_numpy()
-    y = df[y_col].to_numpy()
-
-    plt.figure(figsize=(7, 5))
-    plt.scatter(x, y, alpha=0.75)
-
-    slope, intercept = np.polyfit(x, y, 1)
-    x_line = np.linspace(x.min(), x.max(), 100)
-    y_line = slope * x_line + intercept
-    plt.plot(x_line, y_line)
-
-    plt.title(f"{x_col.replace('_', ' ').title()} and {y_col.replace('_', ' ').title()}")
-    plt.xlabel(x_col.replace("_", " ").title())
-    plt.ylabel(y_col.replace("_", " ").title())
-    plt.tight_layout()
-    plt.savefig(FIGURE_DIR / file_name, dpi=300)
-    plt.close()
-
-
-def main() -> None:
-    ensure_output_dirs()
-    df = load_data()
-
-    write_descriptive_outputs(df)
-    fit_models(df)
-
-    plot_relationship(
-        df,
-        "openness",
-        "divergent_thinking",
-        "python_openness_divergent_thinking.png",
-    )
-    plot_relationship(
-        df,
-        "openness",
-        "creative_achievement",
-        "python_openness_creative_achievement.png",
-    )
-
-    print("Python analysis complete.")
-    print(f"Tables written to: {TABLE_DIR}")
-    print(f"Figures written to: {FIGURE_DIR}")
+    print(f"Analysis complete. Outputs written to {TABLE_DIR} and {FIGURE_DIR}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

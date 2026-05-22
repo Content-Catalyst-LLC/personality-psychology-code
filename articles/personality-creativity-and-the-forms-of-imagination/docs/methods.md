@@ -1,39 +1,27 @@
-# Methods
-
-This directory supports a small reproducible analysis of personality and creativity outcomes.
+# Methods Notes
 
 ## Conceptual model
 
-The article argues that creativity should be treated as a plural construct. The workflows therefore separate:
+The article treats creativity as a multi-component outcome rather than a singular psychological faculty. The computational workflows distinguish:
 
-1. divergent thinking;
-2. creative achievement;
-3. everyday creativity.
+1. **Divergent thinking**: ideational generation and fluency.
+2. **Creative achievement**: realized and recognized output.
+3. **Everyday creativity**: adaptive imagination in ordinary life.
 
-The central model can be written as:
+## Demonstration models
 
-\[
-C_i = \alpha + \beta_1 O_i + \beta_2 D_i + \beta_3 E_i + \beta_4 S_i + \varepsilon_i
-\]
+The basic model is:
 
-where:
+```text
+creative_outcome ~ openness + intellect + conscientiousness + persistence + social_support
+```
 
-- \(C_i\) is a creative outcome;
-- \(O_i\) is openness or openness-related disposition;
-- \(D_i\) is domain knowledge or domain context;
-- \(E_i\) is execution/persistence capacity;
-- \(S_i\) is social support or opportunity.
+The domain-sensitive model is:
 
-## Analytic strategy
-
-The Python and R scripts run:
-
-- descriptive summaries;
-- correlation matrices;
-- ordinary least squares models;
-- domain-sensitive models using categorical predictors;
-- output tables and figures.
+```text
+creative_achievement ~ openness * domain + intellect * domain + persistence + social_support
+```
 
 ## Interpretation
 
-The analysis should be read as a transparent demonstration of model logic. It does not estimate real psychological effect sizes.
+The models demonstrate structure, not population inference. The synthetic data are intentionally compact and should be interpreted as a teaching scaffold.

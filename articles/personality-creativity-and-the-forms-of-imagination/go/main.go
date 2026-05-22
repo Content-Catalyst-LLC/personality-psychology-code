@@ -9,52 +9,43 @@ import (
 	"strconv"
 )
 
-func mustFloat(value string) float64 {
-	parsed, err := strconv.ParseFloat(value, 64)
-	if err != nil {
-		log.Fatalf("could not parse float %q: %v", value, err)
-	}
-	return parsed
-}
-
 func main() {
-	dataPath := filepath.Join("data", "synthetic_personality_creativity.csv")
-	file, err := os.Open(dataPath)
+	root := filepath.Join("..")
+	path := filepath.Join(root, "data", "synthetic_personality_creativity.csv")
+	file, err := os.Open(path)
 	if err != nil {
-		log.Fatalf("could not open %s: %v", dataPath, err)
+		log.Fatal(err)
 	}
 	defer file.Close()
 
 	reader := csv.NewReader(file)
 	records, err := reader.ReadAll()
 	if err != nil {
-		log.Fatalf("could not read CSV: %v", err)
+		log.Fatal(err)
 	}
 
 	if len(records) < 2 {
-		log.Fatal("dataset has no data rows")
+		log.Fatal("no data rows found")
 	}
 
 	headers := records[0]
-	index := make(map[string]int)
-	for i, header := range headers {
-		index[header] = i
+	idx := map[string]int{}
+	for i, h := range headers {
+		idx[h] = i
 	}
 
-	var n float64
-	var opennessSum float64
-	var divergentSum float64
-	var achievementSum float64
-
-	for _, row := range records[1:] {
-		n++
-		opennessSum += mustFloat(row[index["openness"]])
-		divergentSum += mustFloat(row[index["divergent_thinking"]])
-		achievementSum += mustFloat(row[index["creative_achievement"]])
+	cols := []string{"openness", "intellect", "persistence", "social_support", "divergent_thinking", "creative_achievement", "everyday_creativity"}
+	fmt.Println("Column means from Go summary utility")
+	for _, col := range cols {
+		sum := 0.0
+		count := 0.0
+		for _, row := range records[1:] {
+			value, err := strconv.ParseFloat(row[idx[col]], 64)
+			if err == nil {
+				sum += value
+				count++
+			}
+		}
+		fmt.Printf("%s: %.2f\n", col, sum/count)
 	}
-
-	fmt.Printf("Rows: %.0f\n", n)
-	fmt.Printf("Mean openness: %.2f\n", opennessSum/n)
-	fmt.Printf("Mean divergent thinking: %.2f\n", divergentSum/n)
-	fmt.Printf("Mean creative achievement: %.2f\n", achievementSum/n)
 }

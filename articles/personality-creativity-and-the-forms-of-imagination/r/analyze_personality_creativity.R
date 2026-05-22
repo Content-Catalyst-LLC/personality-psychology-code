@@ -1,30 +1,20 @@
 #!/usr/bin/env Rscript
 
-# Analyze synthetic personality-creativity data.
-# Companion workflow for "Personality, Creativity, and the Forms of Imagination."
+# Analyze synthetic personality-creativity data using base R.
 
-suppressPackageStartupMessages({
-  library(readr)
-  library(dplyr)
-  library(ggplot2)
-  library(broom)
-})
-
-`%||%` <- function(x, y) if (is.null(x)) y else x
-
-script_path <- normalizePath(sys.frames()[[1]]$ofile %||% "r/analyze_personality_creativity.R", mustWork = FALSE)
-article_dir <- normalizePath(file.path(dirname(script_path), ".."), mustWork = FALSE)
-
-data_path <- file.path(article_dir, "data", "synthetic_personality_creativity.csv")
-table_dir <- file.path(article_dir, "outputs", "tables")
-figure_dir <- file.path(article_dir, "outputs", "figures")
-
+args <- commandArgs(trailingOnly = FALSE)
+file_arg <- "--file="
+script_path <- sub(file_arg, "", args[grep(file_arg, args)])
+root <- normalizePath(file.path(dirname(script_path), ".."))
+data_path <- file.path(root, "data", "synthetic_personality_creativity.csv")
+table_dir <- file.path(root, "outputs", "tables")
+figure_dir <- file.path(root, "outputs", "figures")
 dir.create(table_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 
-data <- read_csv(data_path, show_col_types = FALSE)
+df <- read.csv(data_path)
 
-numeric_vars <- c(
+numeric_cols <- c(
   "openness",
   "intellect",
   "conscientiousness",
@@ -38,75 +28,25 @@ numeric_vars <- c(
   "everyday_creativity"
 )
 
-descriptive <- data %>%
-  summarise(across(all_of(numeric_vars), list(mean = mean, sd = sd), na.rm = TRUE))
+write.csv(summary(df[numeric_cols]), file.path(table_dir, "r_descriptive_summary.csv"))
+write.csv(round(cor(df[numeric_cols], use = "pairwise.complete.obs"), 3), file.path(table_dir, "r_correlation_matrix.csv"))
 
-write_csv(descriptive, file.path(table_dir, "r_descriptive_statistics.csv"))
+domain_means <- aggregate(df[c("divergent_thinking", "creative_achievement", "everyday_creativity")], by = list(domain = df$domain), mean)
+write.csv(domain_means, file.path(table_dir, "r_domain_outcome_means.csv"), row.names = FALSE)
 
-cor_matrix <- cor(data[, numeric_vars], use = "pairwise.complete.obs")
-write_csv(as.data.frame(cor_matrix), file.path(table_dir, "r_correlation_matrix.csv"))
+model_dt <- lm(divergent_thinking ~ openness + intellect + conscientiousness + persistence + social_support, data = df)
+model_ca <- lm(creative_achievement ~ openness + intellect + conscientiousness + persistence + social_support, data = df)
+model_domain <- lm(creative_achievement ~ openness * domain + intellect * domain + persistence + social_support, data = df)
 
-model_dt <- lm(
-  divergent_thinking ~ openness + intellect + conscientiousness +
-    extraversion + agreeableness + neuroticism,
-  data = data
-)
+capture.output(summary(model_dt), file = file.path(table_dir, "r_model_divergent_thinking.txt"))
+capture.output(summary(model_ca), file = file.path(table_dir, "r_model_creative_achievement.txt"))
+capture.output(summary(model_domain), file = file.path(table_dir, "r_model_domain_sensitive.txt"))
 
-model_ca <- lm(
-  creative_achievement ~ openness + intellect + conscientiousness +
-    persistence + social_support + domain,
-  data = data
-)
+png(file.path(figure_dir, "r_openness_creative_achievement.png"), width = 900, height = 650)
+plot(df$openness, df$creative_achievement,
+     xlab = "Openness", ylab = "Creative Achievement",
+     main = "Openness and Creative Achievement")
+abline(lm(creative_achievement ~ openness, data = df))
+dev.off()
 
-model_ec <- lm(
-  everyday_creativity ~ openness + intellect + conscientiousness +
-    extraversion + agreeableness + persistence + social_support + domain,
-  data = data
-)
-
-model_results <- bind_rows(
-  tidy(model_dt) %>% mutate(model = "divergent_thinking"),
-  tidy(model_ca) %>% mutate(model = "creative_achievement"),
-  tidy(model_ec) %>% mutate(model = "everyday_creativity")
-) %>%
-  select(model, term, estimate, std.error, statistic, p.value)
-
-write_csv(model_results, file.path(table_dir, "r_model_coefficients.csv"))
-
-plot_dt <- ggplot(data, aes(x = openness, y = divergent_thinking)) +
-  geom_point(alpha = 0.75) +
-  geom_smooth(method = "lm", se = TRUE) +
-  labs(
-    title = "Openness and Divergent Thinking",
-    x = "Openness",
-    y = "Divergent Thinking"
-  )
-
-ggsave(
-  filename = file.path(figure_dir, "r_openness_divergent_thinking.png"),
-  plot = plot_dt,
-  width = 7,
-  height = 5,
-  dpi = 300
-)
-
-plot_ca <- ggplot(data, aes(x = openness, y = creative_achievement)) +
-  geom_point(alpha = 0.75) +
-  geom_smooth(method = "lm", se = TRUE) +
-  labs(
-    title = "Openness and Creative Achievement",
-    x = "Openness",
-    y = "Creative Achievement"
-  )
-
-ggsave(
-  filename = file.path(figure_dir, "r_openness_creative_achievement.png"),
-  plot = plot_ca,
-  width = 7,
-  height = 5,
-  dpi = 300
-)
-
-cat("R analysis complete.\n")
-cat("Tables written to:", table_dir, "\n")
-cat("Figures written to:", figure_dir, "\n")
+cat("R analysis complete. Outputs written to:", table_dir, "and", figure_dir, "\n")
