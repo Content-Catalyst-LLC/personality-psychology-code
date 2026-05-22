@@ -1,0 +1,32 @@
+article_slug: the-person-situation-debate-and-the-problem-of-behavioral-consistency
+dataset: data/synthetic_person_situation_data.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - assessment_context
+  - occasion
+person_level_columns:
+  - trait_score
+  - trait_extraversion
+  - trait_conscientiousness
+  - trait_neuroticism
+state_columns:
+  - state_extraversion
+  - state_conscientiousness
+  - state_assertiveness
+  - state_withdrawal
+situation_columns:
+  - situation_demand
+  - situation_sociality
+  - situation_evaluation
+  - situation_trust
+  - situation_autonomy
+  - situation_threat
+derived_targets:
+  - behavioral_consistency_marker
+  - conditional_signature_score
+  - state_inertia_marker
+notes:
+  - Synthetic repeated-measures data only.
+  - Professional education, research prototyping, consulting support, and methodological demonstration are appropriate uses.
+  - Not a standalone assessment or decision system for consequential decisions about individuals.
