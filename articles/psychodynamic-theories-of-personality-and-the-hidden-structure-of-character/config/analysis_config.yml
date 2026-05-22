@@ -1,0 +1,30 @@
+article_slug: psychodynamic-theories-of-personality-and-the-hidden-structure-of-character
+dataset: data/synthetic_psychodynamic_personality.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - developmental_context
+defense_columns:
+  - mature_defenses
+  - neurotic_defenses
+  - immature_defenses
+  - defensive_rigidity
+attachment_columns:
+  - attachment_anxiety
+  - attachment_avoidance
+self_relational_columns:
+  - self_cohesion
+  - relational_security
+  - reflective_functioning
+outcomes:
+  - character_integration
+  - symptom_distress
+derived_constructs:
+  - defensive_maturity
+  - attachment_insecurity
+  - self_relational_capacity
+  - hidden_structure_risk
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for diagnosis, treatment planning, clinical assessment, personality testing, or individual interpretation.
