@@ -1,0 +1,23 @@
+article_slug: personality-and-institutions-leadership-bureaucracy-and-social-order
+dataset: data/synthetic_personality_institutions_bureaucracy.csv
+outputs_dir: outputs
+traits:
+  - conscientiousness
+  - agreeableness
+  - emotional_stability
+  - openness
+  - dark_trait_pressure
+institution_columns:
+  - institutional_unit
+  - role_type
+  - bureaucratic_fit
+  - discretion_level
+  - accountability_strength
+outcomes:
+  - leadership_rating
+  - institutional_performance
+  - institutional_trust
+notes:
+  - Synthetic data only.
+  - Designed for reproducible institutional-personality modeling examples.
+  - Interpret outputs as workflow demonstrations, not personnel assessments.
