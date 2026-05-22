@@ -1,0 +1,37 @@
+article_slug: measurement-in-personality-psychology-self-report-observer-ratings-and-psychometrics
+dataset: data/synthetic_personality_measurement_data.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - assessment_context
+self_report_items:
+  - s1
+  - s2
+  - s3
+  - s4
+  - s5
+observer_report_items:
+  - o1
+  - o2
+  - o3
+  - o4
+  - o5
+response_quality_fields:
+  - attention_check
+  - careless_response_risk
+  - social_desirability_pressure
+  - self_missing_count
+  - observer_missing_count
+derived_scores:
+  - self_conscientiousness
+  - observer_conscientiousness
+  - self_other_discrepancy
+  - absolute_self_other_discrepancy
+  - method_effect_index
+outcomes:
+  - reliability_context_score
+  - professional_reflection_score
+notes:
+  - Synthetic data only.
+  - Professional education, research prototyping, consulting support, and methodological demonstration are appropriate uses.
+  - Not a standalone assessment or decision system for consequential decisions about individuals.
