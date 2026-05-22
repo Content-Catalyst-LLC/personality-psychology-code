@@ -1,0 +1,32 @@
+article_slug: dark-traits-virtue-and-the-moral-structure-of-personality
+dataset: data/synthetic_dark_traits_virtue_personality.csv
+outputs_dir: outputs
+dark_traits:
+  - machiavellianism
+  - narcissism
+  - psychopathy
+  - sadism
+virtue_relevant_traits:
+  - honesty_humility
+  - conscientious_reliability
+  - fairness_orientation
+  - compassion_kindness
+moral_layers:
+  - moral_identity
+  - practical_judgment
+institutional_columns:
+  - institutional_accountability
+  - status_reward_pressure
+outcomes:
+  - unethical_behavior
+  - prosocial_restraint
+  - harm_indicator
+derived_constructs:
+  - dark_trait_burden
+  - virtue_relevant_tendency
+  - moral_integration_index
+  - dark_accountability_risk
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for moral ranking, hiring, social sorting, clinical assessment, or legal evaluation.
