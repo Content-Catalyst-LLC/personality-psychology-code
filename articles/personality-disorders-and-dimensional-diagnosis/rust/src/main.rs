@@ -1,8 +1,40 @@
-fn personality_organization(trait: f64, motive: f64, identity: f64, regulation: f64, adaptation: f64, pressure: f64) -> f64 {
-    0.18 * trait + 0.16 * motive + 0.18 * identity + 0.18 * regulation + 0.14 * adaptation - 0.20 * pressure
-}
+use std::collections::HashMap;
+use std::fs;
+use std::path::Path;
 
 fn main() {
-    let score = personality_organization(0.78, 0.72, 0.68, 0.74, 0.63, 0.22);
-    println!("Personality organization score: {:.3}", score);
+    let root = Path::new("..");
+    let data_path = root.join("data/synthetic_personality_disorders_dimensional_diagnosis.csv");
+    let content = fs::read_to_string(&data_path).expect("could not read dataset");
+
+    let mut lines = content.lines();
+    let header: Vec<&str> = lines.next().expect("missing header").split(',').collect();
+
+    let context_idx = header.iter().position(|h| *h == "clinical_context").expect("clinical_context missing");
+    let severity_idx = header.iter().position(|h| *h == "pd_severity").expect("pd_severity missing");
+
+    let mut counts: HashMap<String, usize> = HashMap::new();
+    let mut sums: HashMap<String, f64> = HashMap::new();
+
+    for line in lines {
+        let fields: Vec<&str> = line.split(',').collect();
+        let context = fields[context_idx].to_string();
+        let severity: f64 = fields[severity_idx].parse().expect("invalid severity value");
+
+        *counts.entry(context.clone()).or_insert(0) += 1;
+        *sums.entry(context).or_insert(0.0) += severity;
+    }
+
+    let out_dir = root.join("outputs");
+    fs::create_dir_all(&out_dir).expect("could not create outputs");
+
+    let mut output = String::from("clinical_context,n,pd_severity_mean\n");
+    for (context, n) in counts.iter() {
+        let mean = sums[context] / (*n as f64);
+        output.push_str(&format!("{},{},{:.4}\n", context, n, mean));
+    }
+
+    let out_path = out_dir.join("rust_pd_severity_summary.csv");
+    fs::write(&out_path, output).expect("could not write output");
+    println!("Wrote Rust output: {}", out_path.display());
 }

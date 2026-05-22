@@ -1,0 +1,33 @@
+article_slug: personality-disorders-and-dimensional-diagnosis
+dataset: data/synthetic_personality_disorders_dimensional_diagnosis.csv
+outputs_dir: outputs
+trait_domains:
+  - negative_affectivity
+  - detachment
+  - antagonism
+  - disinhibition
+  - psychoticism
+  - anankastia
+functioning_domains:
+  - identity_impairment
+  - self_direction_impairment
+  - empathy_impairment
+  - intimacy_impairment
+derived_constructs:
+  - self_functioning
+  - interpersonal_functioning
+  - functioning_impairment
+  - maladaptive_trait_burden
+  - severity_trait_interaction
+clinical_context_columns:
+  - clinical_context
+  - perceived_support
+outcomes:
+  - pd_severity
+  - risk_level
+  - treatment_engagement
+  - borderline_pattern_indicator
+notes:
+  - Synthetic data only.
+  - Designed for reproducible dimensional personality-disorder modeling examples.
+  - Interpret outputs as workflow demonstrations, not clinical assessment or diagnosis.
