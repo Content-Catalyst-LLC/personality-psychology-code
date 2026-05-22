@@ -1,0 +1,39 @@
+article_slug: myers-briggs-type-indicator-history-influence-and-scientific-critique
+dataset: data/synthetic_mbti_typology_vs_traits.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - assessment_context
+latent_dimensions:
+  - latent_ei
+  - latent_sn
+  - latent_tf
+  - latent_jp
+observed_dimensions:
+  - observed_ei
+  - observed_sn
+  - observed_tf
+  - observed_jp
+retest_dimensions:
+  - retest_ei
+  - retest_sn
+  - retest_tf
+  - retest_jp
+type_fields:
+  - type_code
+  - retest_type_code
+measurement_fields:
+  - near_boundary
+  - type_changed_on_retest
+  - min_absolute_distance_to_boundary
+  - continuous_signal_strength
+outcomes:
+  - collaboration_score
+  - reflective_utility_score
+derived_constructs:
+  - boundary_risk_score
+  - information_loss_index
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for hiring, promotion, clinical assessment, diagnosis, educational placement, relationship matching, legal evaluation, or individual prediction.
