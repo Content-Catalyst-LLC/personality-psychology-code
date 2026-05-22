@@ -1,0 +1,27 @@
+article_slug: narrative-identity-and-the-storied-self
+dataset: data/synthetic_narrative_identity.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - narrative_context
+narrative_theme_columns:
+  - redemption
+  - contamination
+  - coherence
+  - agency
+  - communion
+  - meaning_making
+  - narrative_flexibility
+  - defensive_rigidity
+outcomes:
+  - self_continuity
+  - well_being
+derived_constructs:
+  - narrative_growth_orientation
+  - narrative_burden
+  - narrative_integration
+  - redemptive_agency_balance
+notes:
+  - Synthetic narrative data only.
+  - Educational and research-oriented workflow.
+  - Not for clinical assessment, diagnosis, identity evaluation, personality testing, legal evaluation, workplace screening, or individual prediction.
