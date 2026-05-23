@@ -1,0 +1,28 @@
+article_slug: the-lexical-hypothesis-and-the-emergence-of-trait-structure
+dataset: data/synthetic_lexical_descriptors.csv
+sql_dataset: data/synthetic_lexical_scores_for_sql.csv
+outputs_dir: outputs
+identifiers:
+  - respondent_id
+descriptor_columns:
+  - adj1 through adj100
+cluster_columns:
+  - sociable_cluster_score
+  - reliable_cluster_score
+  - compassionate_cluster_score
+  - anxious_cluster_score
+  - imaginative_cluster_score
+criterion_columns:
+  - social_reliability_outcome
+  - interpersonal_trust_outcome
+  - expressive_engagement_outcome
+  - lexical_visibility_index
+derived_columns:
+  - lexical_abundance_index
+  - structural_centrality_index
+  - descriptor_redundancy_index
+  - cross_language_caution_index
+notes:
+  - Synthetic lexical descriptor ratings only.
+  - Professional education, research prototyping, psychometric demonstration, descriptor-pool development, and methodological comparison are appropriate uses.
+  - Not a standalone assessment, diagnosis, placement, screening, moral-labeling, prediction, or decision system.
