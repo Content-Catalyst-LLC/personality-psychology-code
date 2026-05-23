@@ -1,0 +1,43 @@
+article_slug: what-is-a-trait-stability-disposition-and-the-logic-of-individual-difference
+trait_dataset: data/synthetic_trait_items.csv
+state_dataset: data/synthetic_state_observations.csv
+sql_dataset: data/synthetic_trait_state_summary_for_sql.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+trait_item_columns:
+  conscientiousness:
+    - c1
+    - c2
+    - c3
+    - c4
+    - c5
+    - c6
+  extraversion:
+    - e1
+    - e2
+    - e3
+    - e4
+    - e5
+    - e6
+  neuroticism:
+    - n1
+    - n2
+    - n3
+    - n4
+    - n5
+    - n6
+state_columns:
+  - state_extraversion
+  - state_conscientiousness
+  - state_neuroticism
+  - situation_type
+derived_columns:
+  - trait_state_alignment_index
+  - state_variability_index
+  - person_situation_sensitivity_index
+  - aggregation_reliability_index
+notes:
+  - Synthetic trait-item and repeated-state data only.
+  - Professional education, research prototyping, psychometric demonstration, and methodological comparison are appropriate uses.
+  - Not a standalone assessment, diagnosis, placement, screening, moral-labeling, prediction, or decision system.
