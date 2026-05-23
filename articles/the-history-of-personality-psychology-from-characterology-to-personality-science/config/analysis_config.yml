@@ -1,0 +1,40 @@
+article_slug: the-history-of-personality-psychology-from-characterology-to-personality-science
+dataset: data/synthetic_personality_history_items.csv
+sql_dataset: data/synthetic_personality_history_scores_for_sql.csv
+outputs_dir: outputs
+identifiers:
+  - participant_id
+item_columns:
+  - item1 through item60
+conscientiousness_items:
+  - c1
+  - c2
+  - c3
+  - c4
+  - c5
+  - c6
+trait_columns:
+  - extraversion_score
+  - agreeableness_score
+  - conscientiousness_score
+  - neuroticism_score
+  - openness_score
+history_indices:
+  - characterology_typology_index
+  - psychometric_structure_index
+  - person_situation_index
+  - narrative_identity_index
+  - measurement_invariance_caution_index
+  - historical_method_maturity_index
+longitudinal_columns:
+  - conscientiousness_t1
+  - conscientiousness_t2
+person_situation_columns:
+  - behavior_score
+  - trait_score
+  - situation_strength
+  - person_situation_interaction
+notes:
+  - Synthetic personality-history item data only.
+  - Professional education, research prototyping, psychometric demonstration, and methodological comparison are appropriate uses.
+  - Not a standalone assessment, diagnosis, placement, screening, moral-labeling, prediction, or decision system.
