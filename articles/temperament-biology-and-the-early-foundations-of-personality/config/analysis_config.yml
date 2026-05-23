@@ -1,0 +1,27 @@
+article_slug: temperament-biology-and-the-early-foundations-of-personality
+dataset: data/synthetic_temperament_personality_longitudinal.csv
+outputs_dir: outputs
+identifiers:
+  - child_id
+  - developmental_context
+early_temperament_columns:
+  - inhibition_t1
+  - negative_affect_t1
+  - surgency_t1
+  - effortful_control_t1
+environment_columns:
+  - parenting_support_t1
+  - family_stress_t1
+  - classroom_support_t2
+  - peer_support_t2
+  - institutional_stability_t2
+later_personality_columns:
+  - conscientiousness_t2
+  - neuroticism_t2
+  - social_confidence_t2
+  - regulation_skill_t2
+derived_columns:
+  - reactivity_regulation_balance
+  - environmental_support_index
+  - developmental_risk_index
+  - adaptive_pathway_score
