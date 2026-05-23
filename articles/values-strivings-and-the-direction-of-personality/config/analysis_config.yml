@@ -1,0 +1,38 @@
+article_slug: values-strivings-and-the-direction-of-personality
+dataset: data/synthetic_values_strivings_direction.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+  - value_context
+value_columns:
+  - benevolence
+  - universalism
+  - self_direction
+  - achievement
+  - power
+  - security
+  - tradition
+  - stimulation
+striving_columns:
+  - striving_meaning
+  - striving_status
+  - striving_care
+  - striving_autonomy
+  - striving_competence
+  - striving_relatedness
+  - striving_conflict
+  - striving_ownership
+outcomes:
+  - life_satisfaction
+derived_constructs:
+  - self_transcendence
+  - self_enhancement
+  - openness_to_change
+  - conservation
+  - value_tension_total
+  - motivational_quality
+  - life_direction_coherence
+notes:
+  - Synthetic data only.
+  - Educational and research-oriented workflow.
+  - Not for moral ranking, clinical assessment, personality testing, workplace screening, educational placement, legal evaluation, or individual prediction.
