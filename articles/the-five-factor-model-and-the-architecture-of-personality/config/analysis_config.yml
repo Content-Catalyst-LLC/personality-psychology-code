@@ -1,0 +1,38 @@
+article_slug: the-five-factor-model-and-the-architecture-of-personality
+dataset: data/synthetic_ffm_items.csv
+sql_dataset: data/synthetic_ffm_scores_for_sql.csv
+outputs_dir: outputs
+identifiers:
+  - respondent_id
+domain_columns:
+  - extraversion_score
+  - agreeableness_score
+  - conscientiousness_score
+  - neuroticism_score
+  - openness_score
+facet_columns:
+  - sociability_score
+  - assertiveness_score
+  - compassion_score
+  - politeness_score
+  - orderliness_score
+  - industriousness_score
+  - anxiety_score
+  - volatility_score
+  - aesthetics_score
+  - intellect_score
+outcome_columns:
+  - outcome_score
+  - broad_life_functioning
+  - relationship_functioning
+  - creative_engagement
+  - emotional_distress
+derived_columns:
+  - facet_profile_dispersion
+  - hierarchy_consistency_index
+  - bandwidth_fidelity_gap
+  - domain_facet_alignment
+notes:
+  - Synthetic Five-Factor item data only.
+  - Professional education, research prototyping, psychometric demonstration, and methodological comparison are appropriate uses.
+  - Not a standalone assessment, diagnosis, placement, screening, moral-labeling, prediction, or decision system.
