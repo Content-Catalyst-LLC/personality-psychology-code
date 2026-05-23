@@ -1,0 +1,54 @@
+article_slug: what-is-personality-psychology-traits-identity-development-and-measurement
+personality_dataset: data/synthetic_personality_items.csv
+person_situation_dataset: data/synthetic_person_situation_observations.csv
+sql_dataset: data/synthetic_personality_summary_for_sql.csv
+outputs_dir: outputs
+identifiers:
+  - person_id
+broad_item_columns:
+  - item1 through item60
+trait_item_groups:
+  conscientiousness:
+    - c1
+    - c2
+    - c3
+    - c4
+    - c5
+    - c6
+  extraversion:
+    - e1
+    - e2
+    - e3
+    - e4
+    - e5
+    - e6
+  neuroticism:
+    - n1
+    - n2
+    - n3
+    - n4
+    - n5
+    - n6
+trait_scores:
+  - conscientiousness_score
+  - extraversion_score
+  - neuroticism_score
+outcomes:
+  - identity_coherence
+  - life_satisfaction
+  - social_functioning
+  - developmental_integration
+person_situation_columns:
+  - behavior_score
+  - trait_score
+  - situation_strength
+  - trait_x_situation
+indices:
+  - measurement_reliability_index
+  - identity_trait_alignment_index
+  - person_situation_sensitivity_index
+  - responsible_interpretation_index
+notes:
+  - Synthetic personality and person-situation data only.
+  - Professional education, research prototyping, psychometric demonstration, and methodological comparison are appropriate uses.
+  - Not a standalone assessment, diagnosis, placement, screening, moral-labeling, prediction, or decision system.
